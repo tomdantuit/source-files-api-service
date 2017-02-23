@@ -9,11 +9,8 @@ target/
 .settings
 .springBeans
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
+### IntelliJ ###
+.idea/libraries
 
 ### NetBeans ###
 nbproject/private/
