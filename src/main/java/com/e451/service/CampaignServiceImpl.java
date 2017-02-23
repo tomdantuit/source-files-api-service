@@ -2,6 +2,9 @@ package com.e451.service;
 
 
 import com.e451.domain.Campaign;
+import com.e451.models.CampaignRecord;
+import com.e451.repository.CampaignRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
@@ -13,16 +16,27 @@ import java.util.List;
 @Service
 public class CampaignServiceImpl implements CampaignService {
 
+    CampaignRepository campaignRepository;
+
+    @Autowired
+    public CampaignServiceImpl(CampaignRepository campaignRepository) {
+        this.campaignRepository = campaignRepository;
+    }
+
     @Override
     public Page<Campaign> getCampaigns(Pageable pageable) {
-        List<Campaign> campaigns = new ArrayList<>(1);
 
-        campaigns.add(new Campaign(new Long(1)
-                , new Long(2222)
-                , "Description"));
+        Page<CampaignRecord> result = campaignRepository.findAll(pageable);
+        List<Campaign> campaigns = new ArrayList<>(result.getSize());
 
-        Page<Campaign> result = new PageImpl<Campaign>(campaigns);
-        return result;
+        for (CampaignRecord record :
+                result) {
+            campaigns.add(new Campaign(record.getId()
+                ,record.getHshdKey()
+            ,record.getDescription()));
+        }
+
+        return new PageImpl<Campaign>(campaigns);
     }
 
 }
