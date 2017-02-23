@@ -9,7 +9,7 @@ import javax.persistence.Id;
 @Entity
 public class CampaignRecord {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
     private Long hshdKey;
     private String description;
