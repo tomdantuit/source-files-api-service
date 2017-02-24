@@ -1,12 +1,12 @@
 package com.e451.domain;
 
-public class Campaign {
+public class CampaignMembership {
 
     private Long id;
     private Long hshdKey;
     private String description;
 
-    public Campaign(Long id, Long hshdKey, String description) {
+    public CampaignMembership(Long id, Long hshdKey, String description) {
         this.id = id;
         this.hshdKey = hshdKey;
         this.description = description;

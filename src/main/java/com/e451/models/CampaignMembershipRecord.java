@@ -7,14 +7,16 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class CampaignRecord {
+public class CampaignMembershipRecord {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
     private Long hshdKey;
     private String description;
 
-    public CampaignRecord(Long id, Long hshdKey, String description) {
+    public CampaignMembershipRecord() {};
+
+    public CampaignMembershipRecord(Long id, Long hshdKey, String description) {
         this.id = id;
         this.hshdKey = hshdKey;
         this.description = description;
