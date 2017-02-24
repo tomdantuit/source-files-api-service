@@ -7,12 +7,8 @@ import com.e451.repository.CampaignMembershipRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Service
 public class CampaignMembershipServiceImpl implements CampaignMembershipService {
@@ -23,11 +19,12 @@ public class CampaignMembershipServiceImpl implements CampaignMembershipService 
     private static final Converter<CampaignMembershipRecord, CampaignMembership> CampaignMembershipRecordCampaignMembershipConverter
             = new Converter<CampaignMembershipRecord, CampaignMembership>() {
         @Override
-        public CampaignMembership convert(CampaignMembershipRecord CampaignMembershipRecord) {
+        public CampaignMembership convert(CampaignMembershipRecord campaignMembershipRecord) {
 
-            return new CampaignMembership(CampaignMembershipRecord.getId()
-                            , CampaignMembershipRecord.getHshdKey()
-                            , CampaignMembershipRecord.getDescription());
+            return new CampaignMembership(campaignMembershipRecord.getId()
+                            , campaignMembershipRecord.getHshdKey()
+                            , campaignMembershipRecord.getDescription()
+                            , campaignMembershipRecord.getCampaignId());
         }
     };
 

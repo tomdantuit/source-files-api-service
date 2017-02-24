@@ -1,27 +1,34 @@
 package com.e451.models;
 
+import javax.persistence.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Entity
+@Entity()
+@Table(name = "campaign_table")
 public class CampaignMembershipRecord {
+
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
+    private Long campaignId;
     private Long hshdKey;
     private String description;
 
-    public CampaignMembershipRecord() {};
+    public CampaignMembershipRecord() {}
 
-    public CampaignMembershipRecord(Long id, Long hshdKey, String description) {
+    public CampaignMembershipRecord(Long id, Long hshdKey, String description, Long campaignId) {
         this.id = id;
         this.hshdKey = hshdKey;
         this.description = description;
+        this.campaignId = campaignId;
     }
 
+        public Long getCampaignId() {
+        return campaignId;
+    };
+
+    public void setCampaignId(Long campaignId) {
+        this.campaignId = campaignId;
+    }
 
     public Long getId() {
         return id;

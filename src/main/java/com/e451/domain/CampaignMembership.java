@@ -5,11 +5,21 @@ public class CampaignMembership {
     private Long id;
     private Long hshdKey;
     private String description;
+    private Long campaignId;
 
-    public CampaignMembership(Long id, Long hshdKey, String description) {
+    public CampaignMembership(Long id, Long hshdKey, String description, Long campaignId) {
         this.id = id;
         this.hshdKey = hshdKey;
         this.description = description;
+        this.campaignId = campaignId;
+    }
+
+    public Long getCampaignId() {
+        return campaignId;
+    }
+
+    public void setCampaignId(Long campaignId) {
+        this.campaignId = campaignId;
     }
 
     public Long getId() {

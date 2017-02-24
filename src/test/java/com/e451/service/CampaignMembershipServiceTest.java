@@ -24,10 +24,12 @@ public class CampaignMembershipServiceTest {
     private final Long CAMPAIGN_MEMBERSHIP_ID1 = new Long(1);
     private final Long CAMPAIGN_MEMBERSHIP1_HSHD_KEY = new Long(1);
     private final String CAMPAIGN_MEMBERSHIP1_DESC = "CampaignMembership1";
+    private final Long CAMPAIGN_MEMBERSHIP1_CAMPAIGN_ID = new Long(1);
 
     private final Long CAMPAIGN_MEMBERSHIP2_ID = new Long(2);
     private final Long CAMPAIGN_MEMBERSHIP2_HSHD_KEY = new Long(2);
     private final String CAMPAIGN_MEMBERSHIP2_DESC = "CampaignMembership2";
+    private final Long CAMPAIGN_MEMBERSHIP2_CAMPAIGN_ID = new Long(2);
 
 
     private CampaignMembershipService testCampaignMembershipService;
@@ -51,7 +53,8 @@ public class CampaignMembershipServiceTest {
     public void testCampaignMembershipServiceShouldReturnCampaignMemberships() {
         CampaignMembershipRecords.add(new CampaignMembershipRecord(CAMPAIGN_MEMBERSHIP_ID1
                 , CAMPAIGN_MEMBERSHIP1_HSHD_KEY
-                , CAMPAIGN_MEMBERSHIP1_DESC));
+                , CAMPAIGN_MEMBERSHIP1_DESC
+                , CAMPAIGN_MEMBERSHIP1_CAMPAIGN_ID));
         when(CampaignMembershipRepository.findAll(any(Pageable.class))).thenReturn(new PageImpl<>(CampaignMembershipRecords));
         Page<CampaignMembership> CampaignMemberships = testCampaignMembershipService.getCampaignMemberships(mockPageable);
         Assert.assertNotNull("getCampaignMemberships returned null", CampaignMemberships);
@@ -64,10 +67,12 @@ public class CampaignMembershipServiceTest {
     public void testCampaignMembershipServiceShouldReturnTwoCampaignMemberships() {
         CampaignMembershipRecords.add(new CampaignMembershipRecord(CAMPAIGN_MEMBERSHIP_ID1
                 , CAMPAIGN_MEMBERSHIP1_HSHD_KEY
-                , CAMPAIGN_MEMBERSHIP1_DESC));
+                , CAMPAIGN_MEMBERSHIP1_DESC
+                , CAMPAIGN_MEMBERSHIP1_CAMPAIGN_ID));
         CampaignMembershipRecords.add(new CampaignMembershipRecord(CAMPAIGN_MEMBERSHIP2_ID
                 , CAMPAIGN_MEMBERSHIP2_HSHD_KEY
-                , CAMPAIGN_MEMBERSHIP2_DESC));
+                , CAMPAIGN_MEMBERSHIP2_DESC
+                , CAMPAIGN_MEMBERSHIP2_CAMPAIGN_ID));
         when(CampaignMembershipRepository.findAll(any(Pageable.class))).thenReturn(new PageImpl<>(CampaignMembershipRecords));
         Page<CampaignMembership> CampaignMemberships = testCampaignMembershipService.getCampaignMemberships(mockPageable);
         Assert.assertNotNull("getCampaignMemberships returned null", CampaignMemberships);
@@ -87,7 +92,8 @@ public class CampaignMembershipServiceTest {
 
         CampaignMembershipRecord mockCampaignMembershipRecord = new CampaignMembershipRecord(CAMPAIGN_MEMBERSHIP_ID1
             , CAMPAIGN_MEMBERSHIP1_HSHD_KEY
-            , CAMPAIGN_MEMBERSHIP1_DESC);
+            , CAMPAIGN_MEMBERSHIP1_DESC
+            , CAMPAIGN_MEMBERSHIP1_CAMPAIGN_ID);
 
         CampaignMembership CampaignMembership = testCampaignMembershipRecordCampaignMembershipConverter.convert(mockCampaignMembershipRecord);
 
