@@ -1,8 +1,13 @@
-package com.e451.domain;
+package com.e451.models;
 
+import javax.persistence.*;
 
-public class Causal {
+@Entity()
+@Table(name = "causal_table")
+public class CausalRecord {
 
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
     private Long product_id;
     private Long store_id;
@@ -10,7 +15,9 @@ public class Causal {
     private String display;
     private String mailer;
 
-    public Causal(Long id, Long product_id, Long store_id, int week_no, String display, String mailer) {
+    public CausalRecord() {}
+
+    public CausalRecord(Long id, Long product_id, Long store_id, int week_no, String display, String mailer) {
         this.id = id;
         this.product_id = product_id;
         this.store_id = store_id;
