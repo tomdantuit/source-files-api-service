@@ -5,7 +5,7 @@ package com.e451.domain;
  */
 public class HouseholdDemographic {
 
-    private Long householdKey;
+    private Long hshdKey;
     private String ageDescription;
     private String maritalStatusCode;
     private String incomeDesc;
@@ -14,8 +14,8 @@ public class HouseholdDemographic {
     private String householdSizeDesc;
     private String kidCategoryDesc;
 
-    public HouseholdDemographic(Long householdKey, String ageDescription, String maritalStatusCode, String incomeDesc, String homeownerDesc, String householdCompositionDesc, String householdSizeDesc, String kidCategoryDesc) {
-        this.householdKey = householdKey;
+    public HouseholdDemographic(Long hshdKey, String ageDescription, String maritalStatusCode, String incomeDesc, String homeownerDesc, String householdCompositionDesc, String householdSizeDesc, String kidCategoryDesc) {
+        this.hshdKey = hshdKey;
         this.ageDescription = ageDescription;
         this.maritalStatusCode = maritalStatusCode;
         this.incomeDesc = incomeDesc;
@@ -26,11 +26,11 @@ public class HouseholdDemographic {
     }
 
     public Long getHouseholdKey() {
-        return householdKey;
+        return hshdKey;
     }
 
     public void setHouseholdKey(Long householdKey) {
-        this.householdKey = householdKey;
+        this.hshdKey = householdKey;
     }
 
     public String getAgeDescription() {
