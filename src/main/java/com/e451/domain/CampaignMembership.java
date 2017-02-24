@@ -1,15 +1,25 @@
 package com.e451.domain;
 
-public class Campaign {
+public class CampaignMembership {
 
     private Long id;
     private Long hshdKey;
     private String description;
+    private Long campaignId;
 
-    public Campaign(Long id, Long hshdKey, String description) {
+    public CampaignMembership(Long id, Long hshdKey, String description, Long campaignId) {
         this.id = id;
         this.hshdKey = hshdKey;
         this.description = description;
+        this.campaignId = campaignId;
+    }
+
+    public Long getCampaignId() {
+        return campaignId;
+    }
+
+    public void setCampaignId(Long campaignId) {
+        this.campaignId = campaignId;
     }
 
     public Long getId() {
