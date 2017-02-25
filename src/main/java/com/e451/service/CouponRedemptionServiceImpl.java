@@ -31,7 +31,7 @@ public class CouponRedemptionServiceImpl implements CouponRedemptionService {
         }
     };
 
-    public Converter<CouponRedemptionRecord, CouponRedemption> getCouponRedemptionRecordCampaignMembershipConverter() {
+    public Converter<CouponRedemptionRecord, CouponRedemption> getCouponRedemptionRecordCouponRedemptionConverter() {
         return CouponRedemptionRecordCouponRedemptionConverter;
     }
 

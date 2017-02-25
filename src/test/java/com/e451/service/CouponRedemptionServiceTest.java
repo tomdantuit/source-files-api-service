@@ -86,7 +86,7 @@ public class CouponRedemptionServiceTest {
     @Test
     public void setTestCouponRedemptionServiceCouponRedemptionsRecordCouponRedemptionConverterProperlyMapsCouponRedemptions() {
         Converter<CouponRedemptionRecord, CouponRedemption> testCouponRedemptionRecordCouponRedemptionConverter
-                = testCouponRedemptionService.getCouponRedemptionRecordCampaignMembershipConverter();
+                = testCouponRedemptionService.getCouponRedemptionRecordCouponRedemptionConverter();
 
         Assert.assertNotNull(testCouponRedemptionRecordCouponRedemptionConverter);
 
