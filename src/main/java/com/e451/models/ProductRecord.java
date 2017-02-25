@@ -18,7 +18,8 @@ public class ProductRecord {
 
     public ProductRecord() {}
 
-    public ProductRecord(String commodity_desc, String sub_commodity_desc, String manufacturer, String department, String brand, String curr_size_of_product) {
+    public ProductRecord(Long product_id, String commodity_desc, String sub_commodity_desc, String manufacturer, String department, String brand, String curr_size_of_product) {
+        this.product_id = product_id;
         this.commodity_desc = commodity_desc;
         this.sub_commodity_desc = sub_commodity_desc;
         this.manufacturer = manufacturer;
