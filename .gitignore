@@ -11,8 +11,17 @@ src/main/resources/application-*.properties
 .springBeans
 
 ### IntelliJ ###
-.idea/libraries
+*.iws
+.idea/uiDesigner.xml
 .idea/workspace.xml
+.idea/libraries
+.idea/shelf
+
+application-*.properties
+
+# Ignore any user created dictionaries, but include the 'shared' dictionary
+.idea/dictionaries/*
+!.idea/dictionaries/shared.xml
 
 ### NetBeans ###
 nbproject/private/
