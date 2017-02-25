@@ -26,7 +26,7 @@ public class CampaignMembershipController {
         this.campaignMembershipService = CampaignMembershipService;
     }
 
-    @RequestMapping(path = "/CampaignMemberships", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
+    @RequestMapping(path = "/campaignMemberships", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
     public HttpEntity<PagedResources<CampaignMembership>> getCampaignMemberships(Pageable pageable
             , PagedResourcesAssembler<CampaignMembership> pageResourceAssembler) {
         Page<CampaignMembership> CampaignMemberships = campaignMembershipService.getCampaignMemberships(pageable);
