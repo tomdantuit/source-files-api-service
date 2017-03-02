@@ -1,6 +1,7 @@
 package com.e451.service;
 
 import com.e451.domain.HouseholdDemographic;
+import com.e451.repository.HouseholdDemographicRepository;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,22 +16,24 @@ import static org.mockito.Mockito.mock;
 public class HouseholdDemographicTest {
 
     private HouseholdDemographicService testHouseholdDemographicService;
+    private HouseholdDemographicRepository householdDemographicRepository = mock(HouseholdDemographicRepository.class);
+
     private Pageable mockPageable = mock(Pageable.class);
 
     @Before
     public void setUp() {
-        testHouseholdDemographicService = new HouseholdDemographicServiceImpl();
+        testHouseholdDemographicService = new HouseholdDemographicServiceImpl(householdDemographicRepository);
     }
 
     @Test
     public void testHouseholdDemographicServiceShouldConstruct() {
-        Assert.assertNotNull("Coupon service didn't start"
+        Assert.assertNotNull("Household demographic service didn't start"
                 , testHouseholdDemographicService);
     }
 
     @Test
     public void testHouseholdDemographicServiceShouldReturnHouseholdDemographics() {
-        Page<HouseholdDemographic> HouseholdDemographics = testHouseholdDemographicService.getHousehold(mockPageable);
+        Page<HouseholdDemographic> HouseholdDemographics = testHouseholdDemographicService.getHouseholdDemographics(mockPageable);
         Assert.assertNotNull("getHousehold returned null", HouseholdDemographics);
         Assert.assertNotNull("Household Demographics body does not exist"
                 , HouseholdDemographics.getContent());
