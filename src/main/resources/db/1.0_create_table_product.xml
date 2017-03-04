@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.7"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.7
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.7.xsd">
+    <changeSet id="v1-create-table-product" author="jm8451">
+        <comment>Creates the intial version of the PRODUCT table</comment>
+        <createTable tableName="PRODUCT"
+                     remarks="Contains information on each product sold such as type of product, national or private label, and a brand identifier.">
+            <column name="PRODUCT_ID"
+                    type="BIGINT"
+                    remarks="Number that uniquely identifies each product"/>
+            <column name="DEPARTMENT"
+                    type="java.sql.Types.VARCHAR(200)"
+                    remarks="Groups similar products together"/>
+            <column name="COMMODITY_DESC"
+                    type="java.sql.Types.VARCHAR(200)"
+                    remarks="Groups similar products together at a lower level"/>
+            <column name="SUB_COMMODITY_DESC"
+                    type="java.sql.Types.VARCHAR(200)"
+                    remarks="Groups similar products together at the lowest level"/>
+            <column name="MANUFACTURER"
+                    type="java.sql.Types.VARCHAR(200)"
+                    remarks="Code that links products with the same manufacturer together"/>
+            <column name="BRAND"
+                    type="java.sql.Types.VARCHAR(200)"
+                    remarks="Indicates Private or National label brand"/>
+            <column name="CURR_SIZE_OF_PRODUCT"
+                    type="java.sql.Types.VARCHAR(200)"
+                    remarks="Indicates package size (not available for all products)"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
