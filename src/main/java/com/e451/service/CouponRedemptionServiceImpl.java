@@ -2,7 +2,7 @@ package com.e451.service;
 
 
 import com.e451.domain.CouponRedemption;
-import com.e451.models.CouponRedemptionRecord;
+import com.e451.model.CouponRedemptionRecord;
 import com.e451.repository.CouponRedemptionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;
@@ -24,14 +24,14 @@ public class CouponRedemptionServiceImpl implements CouponRedemptionService {
         @Override
         public CouponRedemption convert(CouponRedemptionRecord couponRedemptionRecord) {
 
-            return new CouponRedemption(couponRedemptionRecord.getHousehold_key(),
+            return new CouponRedemption(couponRedemptionRecord.getHouseholdKey(),
                     couponRedemptionRecord.getDay(),
-                    couponRedemptionRecord.getCoupon_upc(),
+                    couponRedemptionRecord.getCouponUpc(),
                     couponRedemptionRecord.getCampaign());
         }
     };
 
-    public Converter<CouponRedemptionRecord, CouponRedemption> getCouponRedemptionRecordCouponRedemptionConverter() {
+    Converter<CouponRedemptionRecord, CouponRedemption> getCouponRedemptionRecordCouponRedemptionConverter() {
         return CouponRedemptionRecordCouponRedemptionConverter;
     }
 

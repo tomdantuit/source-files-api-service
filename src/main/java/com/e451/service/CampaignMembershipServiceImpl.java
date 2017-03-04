@@ -2,7 +2,7 @@ package com.e451.service;
 
 
 import com.e451.domain.CampaignMembership;
-import com.e451.models.CampaignMembershipRecord;
+import com.e451.model.CampaignMembershipRecord;
 import com.e451.repository.CampaignMembershipRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;
@@ -28,7 +28,7 @@ public class CampaignMembershipServiceImpl implements CampaignMembershipService 
         }
     };
 
-    public Converter<CampaignMembershipRecord, CampaignMembership> getCampaignMembershipRecordCampaignMembershipConverter() {
+    Converter<CampaignMembershipRecord, CampaignMembership> getCampaignMembershipRecordCampaignMembershipConverter() {
         return CampaignMembershipRecordCampaignMembershipConverter;
     }
 

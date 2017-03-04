@@ -23,7 +23,7 @@ public class CouponController {
     @Autowired
     public CouponController(CouponService couponService) {this.couponService = couponService;}
 
-    @RequestMapping(path="/coupons", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
+    @RequestMapping(path="/coupon", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
     public HttpEntity<PagedResources<Coupon>> getCoupons(Pageable pageable
             , PagedResourcesAssembler<Coupon> pageResourceAssembler) {
         Page<Coupon> coupons = couponService.getCoupons(pageable);

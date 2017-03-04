@@ -23,7 +23,7 @@ public class CouponRedemptionController {
     @Autowired
     public CouponRedemptionController(CouponRedemptionService couponRedemptionService) {this.couponRedemptionService = couponRedemptionService;}
 
-    @RequestMapping(path = "/couponRedemptions", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
+    @RequestMapping(path = "/couponRedemption", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
     public HttpEntity<PagedResources<CouponRedemption>> getCouponRedemptions(Pageable pageable
             , PagedResourcesAssembler<CouponRedemption> pageResourceAssembler) {
 
