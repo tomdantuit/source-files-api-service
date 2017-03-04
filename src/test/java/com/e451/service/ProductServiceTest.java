@@ -1,7 +1,7 @@
 package com.e451.service;
 
 import com.e451.domain.Product;
-import com.e451.models.ProductRecord;
+import com.e451.model.ProductRecord;
 import com.e451.repository.ProductRepository;
 import org.junit.Assert;
 import org.junit.Before;

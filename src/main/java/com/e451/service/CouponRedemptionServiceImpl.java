@@ -2,7 +2,7 @@ package com.e451.service;
 
 
 import com.e451.domain.CouponRedemption;
-import com.e451.models.CouponRedemptionRecord;
+import com.e451.model.CouponRedemptionRecord;
 import com.e451.repository.CouponRedemptionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;

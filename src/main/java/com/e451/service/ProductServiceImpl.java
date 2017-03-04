@@ -2,7 +2,7 @@ package com.e451.service;
 
 
 import com.e451.domain.Product;
-import com.e451.models.ProductRecord;
+import com.e451.model.ProductRecord;
 import com.e451.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;

@@ -2,7 +2,7 @@ package com.e451.service;
 
 
 import com.e451.domain.CampaignDescription;
-import com.e451.models.CampaignDescriptionRecord;
+import com.e451.model.CampaignDescriptionRecord;
 import com.e451.repository.CampaignDescriptionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;
