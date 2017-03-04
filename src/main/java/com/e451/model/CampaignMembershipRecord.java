@@ -1,4 +1,4 @@
-package com.e451.models;
+package com.e451.model;
 
 import javax.persistence.*;
 
