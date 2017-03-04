@@ -11,7 +11,13 @@ public class Product {
     private String brand;
     private String currentSizeOfProduct;
 
-    public Product(Long productId, String commodityDesc, String subCommodityDesc, String manufacturer, String department, String brand, String currentSizeOfProduct) {
+    public Product(Long productId
+            , String commodityDesc
+            , String subCommodityDesc
+            , String manufacturer
+            , String department
+            , String brand
+            , String currentSizeOfProduct) {
         this.productId = productId;
         this.commodityDesc = commodityDesc;
         this.subCommodityDesc = subCommodityDesc;
