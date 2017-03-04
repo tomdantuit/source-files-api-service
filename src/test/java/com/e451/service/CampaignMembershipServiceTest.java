@@ -32,7 +32,7 @@ public class CampaignMembershipServiceTest {
     private final Long CAMPAIGN_MEMBERSHIP2_CAMPAIGN_ID = new Long(2);
 
 
-    private CampaignMembershipService testCampaignMembershipService;
+    private CampaignMembershipServiceImpl testCampaignMembershipService;
     private Pageable mockPageable = mock(Pageable.class);
     private CampaignMembershipRepository CampaignMembershipRepository = mock(CampaignMembershipRepository.class);
     private List<CampaignMembershipRecord> CampaignMembershipRecords = new ArrayList<>(2);

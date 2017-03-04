@@ -24,14 +24,14 @@ public class CouponRedemptionServiceImpl implements CouponRedemptionService {
         @Override
         public CouponRedemption convert(CouponRedemptionRecord couponRedemptionRecord) {
 
-            return new CouponRedemption(couponRedemptionRecord.getHousehold_key(),
+            return new CouponRedemption(couponRedemptionRecord.getHouseholdKey(),
                     couponRedemptionRecord.getDay(),
-                    couponRedemptionRecord.getCoupon_upc(),
+                    couponRedemptionRecord.getCouponUpc(),
                     couponRedemptionRecord.getCampaign());
         }
     };
 
-    public Converter<CouponRedemptionRecord, CouponRedemption> getCouponRedemptionRecordCouponRedemptionConverter() {
+    Converter<CouponRedemptionRecord, CouponRedemption> getCouponRedemptionRecordCouponRedemptionConverter() {
         return CouponRedemptionRecordCouponRedemptionConverter;
     }
 

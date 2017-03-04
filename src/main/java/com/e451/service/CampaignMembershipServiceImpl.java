@@ -28,7 +28,7 @@ public class CampaignMembershipServiceImpl implements CampaignMembershipService 
         }
     };
 
-    public Converter<CampaignMembershipRecord, CampaignMembership> getCampaignMembershipRecordCampaignMembershipConverter() {
+    Converter<CampaignMembershipRecord, CampaignMembership> getCampaignMembershipRecordCampaignMembershipConverter() {
         return CampaignMembershipRecordCampaignMembershipConverter;
     }
 

@@ -9,5 +9,4 @@ import org.springframework.data.domain.Page;
 public interface CampaignDescriptionService {
 
     Page<CampaignDescription> getCampaignDescriptions(org.springframework.data.domain.Pageable pageable);
-    Converter<CampaignDescriptionRecord, CampaignDescription> getCampaignDescriptionRecordCampaignDescriptionConverter();
 }

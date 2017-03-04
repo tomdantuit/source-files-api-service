@@ -8,5 +8,5 @@ import org.springframework.data.domain.Page;
 
 public interface CouponRedemptionService {
     Page<CouponRedemption> getCouponRedemptions(org.springframework.data.domain.Pageable pageable);
-    Converter<CouponRedemptionRecord, CouponRedemption> getCouponRedemptionRecordCouponRedemptionConverter();
+
 }

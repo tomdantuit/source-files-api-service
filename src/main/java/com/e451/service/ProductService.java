@@ -9,5 +9,5 @@ import org.springframework.data.domain.Page;
 public interface ProductService {
 
     Page<Product> getProducts(org.springframework.data.domain.Pageable pageable);
-    Converter<ProductRecord, Product> getProductRecordProductConverter();
+
 }

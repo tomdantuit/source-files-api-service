@@ -3,46 +3,46 @@ package com.e451.domain;
 
 public class Product {
 
-    private Long product_id;
-    private String commodity_desc;
-    private String sub_commodity_desc;
+    private Long productId;
+    private String commodityDesc;
+    private String subCommodityDesc;
     private String manufacturer;
     private String department;
     private String brand;
-    private String curr_size_of_product;
+    private String currentSizeOfProduct;
 
-    public Product(Long product_id, String commodity_desc, String sub_commodity_desc, String manufacturer, String department, String brand, String curr_size_of_product) {
-        this.product_id = product_id;
-        this.commodity_desc = commodity_desc;
-        this.sub_commodity_desc = sub_commodity_desc;
+    public Product(Long productId, String commodityDesc, String subCommodityDesc, String manufacturer, String department, String brand, String currentSizeOfProduct) {
+        this.productId = productId;
+        this.commodityDesc = commodityDesc;
+        this.subCommodityDesc = subCommodityDesc;
         this.manufacturer = manufacturer;
         this.department = department;
         this.brand = brand;
-        this.curr_size_of_product = curr_size_of_product;
+        this.currentSizeOfProduct = currentSizeOfProduct;
     }
 
-    public Long getProduct_id() {
-        return product_id;
+    public Long getProductId() {
+        return productId;
     }
 
-    public void setProduct_id(Long product_id) {
-        this.product_id = product_id;
+    public void setProductId(Long productId) {
+        this.productId = productId;
     }
 
-    public String getCommodity_desc() {
-        return commodity_desc;
+    public String getCommodityDesc() {
+        return commodityDesc;
     }
 
-    public void setCommodity_desc(String commodity_desc) {
-        this.commodity_desc = commodity_desc;
+    public void setCommodityDesc(String commodityDesc) {
+        this.commodityDesc = commodityDesc;
     }
 
-    public String getSub_commodity_desc() {
-        return sub_commodity_desc;
+    public String getSubCommodityDesc() {
+        return subCommodityDesc;
     }
 
-    public void setSub_commodity_desc(String sub_commodity_desc) {
-        this.sub_commodity_desc = sub_commodity_desc;
+    public void setSubCommodityDesc(String subCommodityDesc) {
+        this.subCommodityDesc = subCommodityDesc;
     }
 
     public String getManufacturer() {
@@ -69,11 +69,11 @@ public class Product {
         this.brand = brand;
     }
 
-    public String getCurr_size_of_product() {
-        return curr_size_of_product;
+    public String getCurrentSizeOfProduct() {
+        return currentSizeOfProduct;
     }
 
-    public void setCurr_size_of_product(String curr_size_of_product) {
-        this.curr_size_of_product = curr_size_of_product;
+    public void setCurrentSizeOfProduct(String currentSizeOfProduct) {
+        this.currentSizeOfProduct = currentSizeOfProduct;
     }
 }

@@ -23,12 +23,12 @@ public class CampaignDescriptionServiceImpl implements CampaignDescriptionServic
 
             return new CampaignDescription(campaignDescriptionRecord.getCampaign()
                             , campaignDescriptionRecord.getDescription()
-                            , campaignDescriptionRecord.getStart_day()
-                            , campaignDescriptionRecord.getEnd_day());
+                            , campaignDescriptionRecord.getStartDay()
+                            , campaignDescriptionRecord.getEndDay());
         }
     };
 
-    public Converter<CampaignDescriptionRecord, CampaignDescription> getCampaignDescriptionRecordCampaignDescriptionConverter() {
+    Converter<CampaignDescriptionRecord, CampaignDescription> getCampaignDescriptionRecordCampaignDescriptionConverter() {
         return CampaignDescriptionRecordCampaignDescriptionConverter;
     }
 

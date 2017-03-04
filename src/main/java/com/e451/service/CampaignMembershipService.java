@@ -8,5 +8,4 @@ import org.springframework.data.domain.Page;
 public interface CampaignMembershipService {
 
     Page<CampaignMembership> getCampaignMemberships(org.springframework.data.domain.Pageable pageable);
-    Converter<CampaignMembershipRecord, CampaignMembership> getCampaignMembershipRecordCampaignMembershipConverter();
 }

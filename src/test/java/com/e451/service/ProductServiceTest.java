@@ -37,7 +37,7 @@ public class ProductServiceTest {
     private final String PRODUCT_BRAND_2= "Brand2";
     private final String PRODUCT_CURR_SIZE_OF_PRODUCT_2= "SizeOfProduct2";
 
-    private ProductService testProductService;
+    private ProductServiceImpl testProductService;
     private Pageable mockPageable = mock(Pageable.class);
     private ProductRepository ProductRepository = mock(ProductRepository.class);
     private List<ProductRecord> ProductRecords = new ArrayList<>(2);
@@ -116,13 +116,13 @@ public class ProductServiceTest {
 
         Assert.assertEquals("The PRODUCT_ID was incorrectly converted"
                 , PRODUCT_PRODUCT_ID_1
-                , Product.getProduct_id());
+                , Product.getProductId());
         Assert.assertEquals("The COMMODITY_DESC was incorrectly converted"
                 , PRODUCT_COMMODITY_DESC_1
-                , Product.getCommodity_desc());
+                , Product.getCommodityDesc());
         Assert.assertEquals("The SUB_COMMODITY_DESC was incorrectly converted"
                 , PRODUCT_SUB_COMMODITY_DESC_1
-                , Product.getSub_commodity_desc());
+                , Product.getSubCommodityDesc());
         Assert.assertEquals("The MANUFACTURER was incorrectly converted"
                 , PRODUCT_MANUFACTURER_1
                 , Product.getManufacturer());
@@ -134,7 +134,7 @@ public class ProductServiceTest {
                 , Product.getBrand());
         Assert.assertEquals("The CURR_SIZE_OF_PRODUCT was incorrectly converted"
                 , PRODUCT_CURR_SIZE_OF_PRODUCT_1
-                , Product.getCurr_size_of_product());
+                , Product.getCurrentSizeOfProduct());
 
     }
 

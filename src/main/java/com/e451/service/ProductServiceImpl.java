@@ -21,17 +21,17 @@ public class ProductServiceImpl implements ProductService {
         @Override
         public Product convert(ProductRecord productRecord) {
 
-            return new Product(productRecord.getProduct_id(),
-                    productRecord.getCommodity_desc(),
-                    productRecord.getSub_commodity_desc(),
+            return new Product(productRecord.getProductId(),
+                    productRecord.getCommodityDesc(),
+                    productRecord.getSubCommodityDesc(),
                     productRecord.getManufacturer(),
                     productRecord.getDepartment(),
                     productRecord.getBrand(),
-                    productRecord.getCurr_size_of_product());
+                    productRecord.getCurrentSizeOfProduct());
         }
     };
 
-    public Converter<ProductRecord, Product> getProductRecordProductConverter() {
+    Converter<ProductRecord, Product> getProductRecordProductConverter() {
         return ProductRecordProductConverter;
     }
 
