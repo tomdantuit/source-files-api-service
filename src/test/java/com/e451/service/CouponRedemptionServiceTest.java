@@ -2,7 +2,7 @@ package com.e451.service;
 
 
 import com.e451.domain.CouponRedemption;
-import com.e451.models.CouponRedemptionRecord;
+import com.e451.model.CouponRedemptionRecord;
 import com.e451.repository.CouponRedemptionRepository;
 import org.junit.Assert;
 import org.junit.Before;
@@ -32,7 +32,7 @@ public class CouponRedemptionServiceTest {
     private final String COUPON_REDEMPTION_UPC_2 = "2222222";
     private final String COUPON_REDEMPTION_CAMPAIGN_2 = "LCM Event";
 
-    private CouponRedemptionService testCouponRedemptionService;
+    private CouponRedemptionServiceImpl testCouponRedemptionService;
     private Pageable mockPageable = mock(Pageable.class);
     private CouponRedemptionRepository couponRedemptionRepository = mock(CouponRedemptionRepository.class);
     private List<CouponRedemptionRecord> couponRedemptionRecords = new ArrayList<>(2);
@@ -97,13 +97,13 @@ public class CouponRedemptionServiceTest {
 
         CouponRedemption couponRedemption = testCouponRedemptionRecordCouponRedemptionConverter.convert(mockCouponRedemptionRecord);
 
-        Assert.assertEquals("The Household Key was incorrectly converted", COUPON_REDEMPTION_KEY_1, couponRedemption.getHousehold_key());
+        Assert.assertEquals("The Household Key was incorrectly converted", COUPON_REDEMPTION_KEY_1, couponRedemption.getHouseholdKey());
         Assert.assertEquals("The campaign was incorrectly converted"
                 , COUPON_REDEMPTION_CAMPAIGN_1
                 , couponRedemption.getCampaign());
         Assert.assertEquals("The UPC was incorrectly converted"
                 , COUPON_REDEMPTION_UPC_1
-                , couponRedemption.getCoupon_upc());
+                , couponRedemption.getCouponUpc());
 
     }
 
