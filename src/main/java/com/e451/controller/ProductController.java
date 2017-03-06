@@ -1,7 +1,7 @@
 package com.e451.controller;
 
-import com.e451.domain.CampaignMembership;
-import com.e451.service.CampaignMembershipService;
+import com.e451.domain.Product;
+import com.e451.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -16,20 +16,20 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class CampaignMembershipController {
+public class ProductController {
 
 
-    private CampaignMembershipService campaignMembershipService;
+    private ProductService productService;
 
     @Autowired
-    public CampaignMembershipController(CampaignMembershipService CampaignMembershipService) {
-        this.campaignMembershipService = CampaignMembershipService;
+    public ProductController(ProductService ProductService) {
+        this.productService = ProductService;
     }
 
-    @RequestMapping(path = "/campaignMembership", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
-    public HttpEntity<PagedResources<CampaignMembership>> getCampaignMemberships(Pageable pageable
-            , PagedResourcesAssembler<CampaignMembership> pageResourceAssembler) {
-        Page<CampaignMembership> CampaignMemberships = campaignMembershipService.getCampaignMemberships(pageable);
+    @RequestMapping(path = "/product", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
+    public HttpEntity<PagedResources<Product>> getProducts(Pageable pageable
+            , PagedResourcesAssembler<Product> pageResourceAssembler) {
+        Page<Product> CampaignMemberships = productService.getProducts(pageable);
 
         return new ResponseEntity(pageResourceAssembler.toResource(CampaignMemberships),
                     HttpStatus.OK);
