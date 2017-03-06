@@ -2,7 +2,7 @@ package com.e451.service;
 
 
 import com.e451.domain.Causal;
-import com.e451.models.CausalRecord;
+import com.e451.model.CausalRecord;
 import com.e451.repository.CausalRepository;
 import org.junit.Assert;
 import org.junit.Before;
@@ -36,7 +36,7 @@ public class CausalServiceTest {
     private final String CAUSAL2_DISPLAY = "Display2";
     private final String CAUSAL2_MAILER = "Mailer2";
 
-    private CausalService testCausalService;
+    private CausalServiceImpl testCausalService;
     private Pageable mockPageable = mock(Pageable.class);
     private CausalRepository CausalRepository = mock(CausalRepository.class);
     private List<CausalRecord> CausalRecords = new ArrayList<>(2);

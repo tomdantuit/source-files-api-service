@@ -2,7 +2,7 @@ package com.e451.service;
 
 
 import com.e451.domain.Causal;
-import com.e451.models.CausalRecord;
+import com.e451.model.CausalRecord;
 import com.e451.repository.CausalRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;
@@ -36,7 +36,7 @@ public class CausalServiceImpl implements CausalService {
         }
     };
 
-    public Converter<CausalRecord, Causal> getCausalRecordCausalConverter() {
+    Converter<CausalRecord, Causal> getCausalRecordCausalConverter() {
         return CausalRecordCausalConverter;
     }
 
