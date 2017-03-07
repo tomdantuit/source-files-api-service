@@ -3,7 +3,7 @@ package com.e451.model;
 import javax.persistence.*;
 
 @Entity()
-@Table(name = "causal_table")
+@Table(name = "causal_data")
 public class CausalRecord {
 
     @Id
