@@ -104,9 +104,9 @@ public class CausalServiceTest {
         Causal Causal = testCausalRecordCausalConverter.convert(mockCausalRecord);
 
         Assert.assertEquals("The ID was incorrectly converted", CAUSAL1_ID, Causal.getId());
-        Assert.assertEquals("The product_id was incorrectly converted", CAUSAL1_PRODUCT_ID, Causal.getProduct_id());
-        Assert.assertEquals("The store_id was incorrectly converted", CAUSAL1_STORE_ID, Causal.getStore_id());
-        Assert.assertEquals("The week_no was incorrectly converted", CAUSAL1_WEEK_NO, Causal.getWeek_no());
+        Assert.assertEquals("The product_id was incorrectly converted", CAUSAL1_PRODUCT_ID, Causal.getProductId());
+        Assert.assertEquals("The store_id was incorrectly converted", CAUSAL1_STORE_ID, Causal.getStoreId());
+        Assert.assertEquals("The week_no was incorrectly converted", CAUSAL1_WEEK_NO, Causal.getWeekNo());
         Assert.assertEquals("The display was incorrectly converted", CAUSAL1_DISPLAY, Causal.getDisplay());
         Assert.assertEquals("The mailer was incorrectly converted", CAUSAL1_MAILER, Causal.getMailer());
     }

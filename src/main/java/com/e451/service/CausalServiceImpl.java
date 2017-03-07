@@ -28,9 +28,9 @@ public class CausalServiceImpl implements CausalService {
         public Causal convert(CausalRecord causalRecord) {
 
             return new Causal(causalRecord.getId()
-                , causalRecord.getProduct_id()
-                , causalRecord.getStore_id()
-                , causalRecord.getWeek_no()
+                , causalRecord.getProductId()
+                , causalRecord.getStoreId()
+                , causalRecord.getWeekNo()
                 , causalRecord.getDisplay()
                 , causalRecord.getMailer());
         }

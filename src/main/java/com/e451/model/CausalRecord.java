@@ -9,19 +9,19 @@ public class CausalRecord {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
-    private Long product_id;
-    private Long store_id;
-    private int week_no;
+    private Long productId;
+    private Long storeId;
+    private int weekNo;
     private String display;
     private String mailer;
 
     public CausalRecord() {}
 
-    public CausalRecord(Long id, Long product_id, Long store_id, int week_no, String display, String mailer) {
+    public CausalRecord(Long id, Long productId, Long storeId, int weekNo, String display, String mailer) {
         this.id = id;
-        this.product_id = product_id;
-        this.store_id = store_id;
-        this.week_no = week_no;
+        this.productId = productId;
+        this.storeId = storeId;
+        this.weekNo = weekNo;
         this.display = display;
         this.mailer = mailer;
     }
@@ -34,28 +34,28 @@ public class CausalRecord {
         this.id = id;
     }
 
-    public Long getProduct_id() {
-        return product_id;
+    public Long getProductId() {
+        return productId;
     }
 
-    public void setProduct_id(Long product_id) {
-        this.product_id = product_id;
+    public void setProductId(Long productId) {
+        this.productId = productId;
     }
 
-    public Long getStore_id() {
-        return store_id;
+    public Long getStoreId() {
+        return storeId;
     }
 
-    public void setStore_id(Long store_id) {
-        this.store_id = store_id;
+    public void setStoreId(Long storeId) {
+        this.storeId = storeId;
     }
 
-    public int getWeek_no() {
-        return week_no;
+    public int getWeekNo() {
+        return weekNo;
     }
 
-    public void setWeek_no(int week_no) {
-        this.week_no = week_no;
+    public void setWeekNo(int weekNo) {
+        this.weekNo = weekNo;
     }
 
     public String getDisplay() {
