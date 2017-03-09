@@ -2,7 +2,7 @@ package com.e451.service;
 
 
 import com.e451.domain.Product;
-import com.e451.models.ProductRecord;
+import com.e451.model.ProductRecord;
 import com.e451.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;
@@ -21,17 +21,17 @@ public class ProductServiceImpl implements ProductService {
         @Override
         public Product convert(ProductRecord productRecord) {
 
-            return new Product(productRecord.getProduct_id(),
-                    productRecord.getCommodity_desc(),
-                    productRecord.getSub_commodity_desc(),
+            return new Product(productRecord.getProductId(),
+                    productRecord.getCommodityDesc(),
+                    productRecord.getSubCommodityDesc(),
                     productRecord.getManufacturer(),
                     productRecord.getDepartment(),
                     productRecord.getBrand(),
-                    productRecord.getCurr_size_of_product());
+                    productRecord.getCurrentSizeOfProduct());
         }
     };
 
-    public Converter<ProductRecord, Product> getProductRecordProductConverter() {
+    Converter<ProductRecord, Product> getProductRecordProductConverter() {
         return ProductRecordProductConverter;
     }
 

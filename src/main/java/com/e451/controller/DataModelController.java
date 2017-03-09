@@ -29,7 +29,7 @@ public class DataModelController {
     }
 
 
-    @RequestMapping(path = "/dataModels", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
+    @RequestMapping(path = "/dataModel", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
     public HttpEntity<PagedResources<DataModel>> getDataModels(Pageable pageable
             , PagedResourcesAssembler<DataModel> pageResourceAssembler) {
 

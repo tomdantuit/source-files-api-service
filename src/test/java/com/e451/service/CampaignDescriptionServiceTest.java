@@ -1,7 +1,7 @@
 package com.e451.service;
 
 import com.e451.domain.CampaignDescription;
-import com.e451.models.CampaignDescriptionRecord;
+import com.e451.model.CampaignDescriptionRecord;
 import com.e451.repository.CampaignDescriptionRepository;
 import org.junit.Assert;
 import org.junit.Before;
@@ -33,7 +33,7 @@ public class CampaignDescriptionServiceTest {
     private final Date CAMPAIGN_DESCRIPTION_END_DAY2 = new Date();
 
 
-    private CampaignDescriptionService testCampaignDescriptionService;
+    private CampaignDescriptionServiceImpl testCampaignDescriptionService;
     private Pageable mockPageable = mock(Pageable.class);
     private CampaignDescriptionRepository CampaignDescriptionRepository = mock(CampaignDescriptionRepository.class);
     private List<CampaignDescriptionRecord> CampaignDescriptionRecords = new ArrayList<>(2);
@@ -106,10 +106,10 @@ public class CampaignDescriptionServiceTest {
                 , CampaignDescription.getDescription());
         Assert.assertEquals("The Start_Day was incorrectly converted"
                 , CAMPAIGN_DESCRIPTION_START_DAY1
-                , CampaignDescription.getStart_day());
+                , CampaignDescription.getStartDay());
         Assert.assertEquals("The END_Day was incorrectly converted"
                 , CAMPAIGN_DESCRIPTION_END_DAY1
-                , CampaignDescription.getEnd_day());
+                , CampaignDescription.getEndDay());
     }
 
 

@@ -1,7 +1,7 @@
 package com.e451.repository;
 
 
-import com.e451.models.CampaignDescriptionRecord;
+import com.e451.model.CampaignDescriptionRecord;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 

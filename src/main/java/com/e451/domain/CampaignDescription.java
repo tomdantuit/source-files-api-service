@@ -6,14 +6,14 @@ public class CampaignDescription {
 
     private Long campaign;
     private String description;
-    private Date start_day;
-    private Date end_day;
+    private Date startDay;
+    private Date endDay;
 
-    public CampaignDescription(Long campaign, String description, Date start_day, Date end_day) {
+    public CampaignDescription(Long campaign, String description, Date startDay, Date endDay) {
         this.campaign = campaign;
         this.description = description;
-        this.start_day = start_day;
-        this.end_day = end_day;
+        this.startDay = startDay;
+        this.endDay = endDay;
     }
 
     public Long getCampaign() {
@@ -32,19 +32,19 @@ public class CampaignDescription {
         this.description = description;
     }
 
-    public Date getStart_day() {
-        return start_day;
+    public Date getStartDay() {
+        return startDay;
     }
 
-    public void setStart_day(Date start_day) {
-        this.start_day = start_day;
+    public void setStartDay(Date startDay) {
+        this.startDay = startDay;
     }
 
-    public Date getEnd_day() {
-        return end_day;
+    public Date getEndDay() {
+        return endDay;
     }
 
-    public void setEnd_day(Date end_day) {
-        this.end_day = end_day;
+    public void setEndDay(Date endDay) {
+        this.endDay = endDay;
     }
 }
