@@ -1,25 +1,25 @@
 package com.e451.domain;
 
-import java.util.Date;
-
 /**
  * Created by e978726 on 2/24/2017.
  */
 public class Transaction {
+    private Long id;
     private Long householdKey;
     private Long basketId;
     private Long day;
     private Long productId;
     private Long quantity;
-    private double salesValue;
+    private Double salesValue;
     private Long storeId;
-    private double couponMatchDiscount;
-    private double couponDisc;
-    private double retailDisc;
-    private Date transTime;
+    private Double couponMatchDiscount;
+    private Double couponDisc;
+    private Double retailDisc;
+    private Long transTime;
     private Long weekNo;
 
-    public Transaction(Long householdKey, Long basketId, Long day, Long productId, Long quantity, double salesValue, Long storeId, double couponMatchDiscount, double couponDisc, double retailDisc, Date transTime, Long weekNo) {
+    public Transaction(Long id, Long householdKey, Long basketId, Long day, Long productId, Long quantity, Double salesValue, Long storeId, Double couponMatchDiscount, Double couponDisc, Double retailDisc, Long transTime, Long weekNo) {
+        this.id = id;
         this.householdKey = householdKey;
         this.basketId = basketId;
         this.day = day;
@@ -32,6 +32,14 @@ public class Transaction {
         this.retailDisc = retailDisc;
         this.transTime = transTime;
         this.weekNo = weekNo;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Long getHouseholdKey() {
@@ -74,11 +82,11 @@ public class Transaction {
         this.quantity = quantity;
     }
 
-    public double getSalesValue() {
+    public Double getSalesValue() {
         return salesValue;
     }
 
-    public void setSalesValue(double salesValue) {
+    public void setSalesValue(Double salesValue) {
         this.salesValue = salesValue;
     }
 
@@ -90,35 +98,35 @@ public class Transaction {
         this.storeId = storeId;
     }
 
-    public double getCouponMatchDiscount() {
+    public Double getCouponMatchDiscount() {
         return couponMatchDiscount;
     }
 
-    public void setCouponMatchDiscount(double couponMatchDiscount) {
+    public void setCouponMatchDiscount(Double couponMatchDiscount) {
         this.couponMatchDiscount = couponMatchDiscount;
     }
 
-    public double getCouponDisc() {
+    public Double getCouponDisc() {
         return couponDisc;
     }
 
-    public void setCouponDisc(double couponDisc) {
+    public void setCouponDisc(Double couponDisc) {
         this.couponDisc = couponDisc;
     }
 
-    public double getRetailDisc() {
+    public Double getRetailDisc() {
         return retailDisc;
     }
 
-    public void setRetailDisc(double retailDisc) {
+    public void setRetailDisc(Double retailDisc) {
         this.retailDisc = retailDisc;
     }
 
-    public Date getTransTime() {
+    public Long getTransTime() {
         return transTime;
     }
 
-    public void setTransTime(Date transTime) {
+    public void setTransTime(Long transTime) {
         this.transTime = transTime;
     }
 

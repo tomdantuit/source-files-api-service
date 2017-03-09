@@ -13,7 +13,6 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import static org.mockito.Matchers.any;
@@ -25,30 +24,32 @@ import static org.mockito.Mockito.when;
  */
 public class TransactionServiceTest {
     // Constants for testing
+    private final Long ID = new Long(1);
     private final Long HOUSEHOLD_KEY = new Long(1);
     private final Long BASKET_ID = new Long(2);
     private final Long DAY = new Long(8);
     private final Long PRODUCT_ID = new Long(3);
     private final Long QUANTITY = new Long(4);
-    private final double SALES_VALUE = 1.25;
+    private final Double SALES_VALUE = 1.25;
     private final Long STORE_ID = new Long(5);
-    private final double COUPON_MATCH_DISCOUNT = .55;
-    private final double COUPON_DISC = .10;
-    private final double RETAIL_DISC = .05;
-    private final Date TRANS_TIME = new Date();
+    private final Double COUPON_MATCH_DISCOUNT = .55;
+    private final Double COUPON_DISC = .10;
+    private final Double RETAIL_DISC = .05;
+    private final Long TRANS_TIME = new Long(1425);
     private final Long WEEK_NO = new Long(6);
 
+    private final Long ID2 = new Long(2);
     private final Long HOUSEHOLD_KEY2 = new Long(2);
     private final Long BASKET_ID2 = new Long(3);
     private final Long DAY2 = new Long(8);
     private final Long PRODUCT_ID2 = new Long(4);
     private final Long QUANTITY2 = new Long(5);
-    private final double SALES_VALUE2 = 5.25;
+    private final Double SALES_VALUE2 = 5.25;
     private final Long STORE_ID2 = new Long(6);
-    private final double COUPON_MATCH_DISCOUNT2 = .25;
-    private final double COUPON_DISC2 = .15;
-    private final double RETAIL_DISC2 = .07;
-    private final Date TRANS_TIME2 = new Date();
+    private final Double COUPON_MATCH_DISCOUNT2 = .25;
+    private final Double COUPON_DISC2 = .15;
+    private final Double RETAIL_DISC2 = .07;
+    private final Long TRANS_TIME2 = new Long(1725);
     private final Long WEEK_NO2 = new Long(7);
 
     private TransactionService testTransactionService;
@@ -71,6 +72,7 @@ public class TransactionServiceTest {
     @Test
     public void testTransactionServiceShouldReturnTransactions() {
         TransactionRecords.add(new TransactionRecord(
+                ID,
                 HOUSEHOLD_KEY,
                 BASKET_ID,
                 DAY,
@@ -94,7 +96,9 @@ public class TransactionServiceTest {
 
     @Test
     public void testTransactionServiceShouldReturnTwoTransactions() {
-        TransactionRecords.add(new TransactionRecord(HOUSEHOLD_KEY,
+        TransactionRecords.add(new TransactionRecord(
+                ID,
+                HOUSEHOLD_KEY,
                 BASKET_ID,
                 DAY,
                 PRODUCT_ID,
@@ -107,6 +111,7 @@ public class TransactionServiceTest {
                 TRANS_TIME,
                 WEEK_NO));
         TransactionRecords.add(new TransactionRecord(
+                ID2,
                 HOUSEHOLD_KEY2,
                 BASKET_ID2,
                 DAY2,
@@ -138,6 +143,7 @@ public class TransactionServiceTest {
         Assert.assertNotNull(testTransactionRecordTransactionConverter);
 
         TransactionRecord mockTransactionRecord = new TransactionRecord(
+                ID,
                 HOUSEHOLD_KEY,
                 BASKET_ID,
                 DAY,
@@ -154,6 +160,7 @@ public class TransactionServiceTest {
 
         Transaction Transaction = testTransactionRecordTransactionConverter.convert(mockTransactionRecord);
 
+        Assert.assertEquals("The Id was incorrectly converted", ID, Transaction.getId());
         Assert.assertEquals("The basketId was incorrectly converted", BASKET_ID, Transaction.getBasketId());
         Assert.assertEquals("The householdKey was incorrectly converted" , HOUSEHOLD_KEY, Transaction.getHouseholdKey());
         Assert.assertEquals("The coupon discount was incorrectly converted", COUPON_DISC, Transaction.getCouponDisc(), 0);

@@ -25,7 +25,8 @@ public class TransactionServiceImpl implements TransactionService {
         @Override
         public Transaction convert(TransactionRecord transactionRecord) {
 
-            return new Transaction(transactionRecord.getHouseholdKey(),
+            return new Transaction(transactionRecord.getId(),
+                    transactionRecord.getHouseholdKey(),
                     transactionRecord.getBasketId(),
                     transactionRecord.getDay(),
                     transactionRecord.getProductId(),
