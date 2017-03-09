@@ -31,3 +31,5 @@ dist/
 nbdist/
 .nb-gradle/
 /.idea/workspace.xml
+/source-files-api-service.iml
+/.idea/workspace.xml
