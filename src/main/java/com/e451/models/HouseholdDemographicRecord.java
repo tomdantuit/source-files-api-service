@@ -2,28 +2,32 @@ package com.e451.models;
 
 import javax.persistence.*;
 
-/**
- * Created by b527047 on 3/2/2017.
- */
-
 @Entity
 @Table(name="hh_demographic")
 public class HouseholdDemographicRecord {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @Column(name="HOUSEHOLD_KEY")
     private Long hshdKey;
+    @Column(name="AGE_DESC")
     private String ageDescription;
+    @Column(name="MARITAL_STATUS_CODE")
     private String maritalStatusCode;
+    @Column(name="INCOME_DESC")
     private String incomeDesc;
+    @Column(name="HOMEOWNER_DESC")
     private String homeownerDesc;
+    @Column(name="HH_COMP_DESC")
     private String householdCompositionDesc;
+    @Column(name="HOUSEHOLD_SIZE_DESC")
     private String householdSizeDesc;
+    @Column(name="KID_CATEGORY_DESC")
     private String kidCategoryDesc;
 
-    public HouseholdDemographicRecord() {};
+    public HouseholdDemographicRecord() {}
 
-    public HouseholdDemographicRecord(String ageDescription, String maritalStatusCode, String incomeDesc, String homeownerDesc, String householdCompositionDesc, String householdSizeDesc, String kidCategoryDesc) {
+    public HouseholdDemographicRecord(Long hshdKey, String ageDescription, String maritalStatusCode, String incomeDesc, String homeownerDesc, String householdCompositionDesc, String householdSizeDesc, String kidCategoryDesc) {
+        this.hshdKey = hshdKey;
         this.ageDescription = ageDescription;
         this.maritalStatusCode = maritalStatusCode;
         this.incomeDesc = incomeDesc;

@@ -1,8 +1,5 @@
 package com.e451.domain;
 
-/**
- * Created by k200745 on 2/23/2017.
- */
 public class HouseholdDemographic {
 
     private Long hshdKey;
@@ -25,13 +22,9 @@ public class HouseholdDemographic {
         this.kidCategoryDesc = kidCategoryDesc;
     }
 
-    public Long getHouseholdKey() {
-        return hshdKey;
-    }
+    public Long getHshdKey() { return hshdKey; }
 
-    public void setHouseholdKey(Long householdKey) {
-        this.hshdKey = householdKey;
-    }
+    public void setHshdKey(Long hshdKey) { this.hshdKey = hshdKey; }
 
     public String getAgeDescription() {
         return ageDescription;
