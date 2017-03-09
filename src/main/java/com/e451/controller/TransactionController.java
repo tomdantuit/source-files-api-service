@@ -14,16 +14,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-/**
- * Created by e978726 on 2/27/2017.
- */
 public class TransactionController {
 
     private TransactionService transactionService;
 
     @Autowired
-    public TransactionController(TransactionService TransactionService) {
-        this.transactionService = TransactionService;
+    public TransactionController(TransactionService transactionService) {
+        this.transactionService = transactionService;
     }
 
     @RequestMapping(path = "/transaction", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})

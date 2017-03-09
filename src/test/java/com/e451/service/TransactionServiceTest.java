@@ -3,7 +3,6 @@ package com.e451.service;
 import com.e451.domain.Transaction;
 import com.e451.models.TransactionRecord;
 import com.e451.repository.TransactionRepository;
-import org.apache.catalina.Store;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -19,9 +18,6 @@ import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-/**
- * Created by e978726 on 2/28/2017.
- */
 public class TransactionServiceTest {
     // Constants for testing
     private final Long ID = new Long(1);
@@ -54,49 +50,22 @@ public class TransactionServiceTest {
 
     private TransactionService testTransactionService;
     private Pageable mockPageable = mock(Pageable.class);
-    private TransactionRepository TransactionRepository = mock(TransactionRepository.class);
-    private List<TransactionRecord> TransactionRecords = new ArrayList<>(2);
+    private TransactionRepository mockTransactionRepository = mock(TransactionRepository.class);
+    private List<TransactionRecord> transactionRecords = new ArrayList<>(2);
 
     @Before
     public void setUp() {
-        testTransactionService = new TransactionServiceImpl(TransactionRepository);
-
+        testTransactionService = new TransactionServiceImpl(mockTransactionRepository);
     }
 
     @Test
     public void testTransactionServiceShouldConstruct() {
-        Assert.assertNotNull("Transaction service was not instantiated"
-                , testTransactionService);
+        Assert.assertNotNull("Transaction service was not instantiated", testTransactionService);
     }
 
     @Test
     public void testTransactionServiceShouldReturnTransactions() {
-        TransactionRecords.add(new TransactionRecord(
-                ID,
-                HOUSEHOLD_KEY,
-                BASKET_ID,
-                DAY,
-                PRODUCT_ID,
-                QUANTITY,
-                SALES_VALUE,
-                STORE_ID,
-                COUPON_MATCH_DISCOUNT,
-                COUPON_DISC,
-                RETAIL_DISC,
-                TRANS_TIME,
-                WEEK_NO
-        ));
-        when(TransactionRepository.findAll(any(Pageable.class))).thenReturn(new PageImpl<>(TransactionRecords));
-        Page<Transaction> Transactions = testTransactionService.getTransactions(mockPageable);
-        Assert.assertNotNull("getTransactions returned null", Transactions);
-        Assert.assertNotNull("Transactions body does not exist"
-                , Transactions.getContent());
-
-    }
-
-    @Test
-    public void testTransactionServiceShouldReturnTwoTransactions() {
-        TransactionRecords.add(new TransactionRecord(
+        transactionRecords.add(new TransactionRecord(
                 ID,
                 HOUSEHOLD_KEY,
                 BASKET_ID,
@@ -110,7 +79,31 @@ public class TransactionServiceTest {
                 RETAIL_DISC,
                 TRANS_TIME,
                 WEEK_NO));
-        TransactionRecords.add(new TransactionRecord(
+
+        when(mockTransactionRepository.findAll(any(Pageable.class))).thenReturn(new PageImpl<>(transactionRecords));
+        Page<Transaction> transactions = testTransactionService.getTransactions(mockPageable);
+        Assert.assertNotNull("getTransactions returned null", transactions);
+        Assert.assertNotNull("Transactions body does not exist", transactions.getContent());
+    }
+
+    @Test
+    public void testTransactionServiceShouldReturnTwoTransactions() {
+        transactionRecords.add(new TransactionRecord(
+                ID,
+                HOUSEHOLD_KEY,
+                BASKET_ID,
+                DAY,
+                PRODUCT_ID,
+                QUANTITY,
+                SALES_VALUE,
+                STORE_ID,
+                COUPON_MATCH_DISCOUNT,
+                COUPON_DISC,
+                RETAIL_DISC,
+                TRANS_TIME,
+                WEEK_NO));
+
+        transactionRecords.add(new TransactionRecord(
                 ID2,
                 HOUSEHOLD_KEY2,
                 BASKET_ID2,
@@ -123,16 +116,13 @@ public class TransactionServiceTest {
                 COUPON_DISC2,
                 RETAIL_DISC2,
                 TRANS_TIME2,
-                WEEK_NO2
-        ));
-        when(TransactionRepository.findAll(any(Pageable.class))).thenReturn(new PageImpl<>(TransactionRecords));
-        Page<Transaction> Transactions = testTransactionService.getTransactions(mockPageable);
-        Assert.assertNotNull("getTransactions returned null", Transactions);
-        Assert.assertNotNull("Transactions body does not exist"
-                , Transactions.getContent());
-        Assert.assertEquals("not the correct number of Transactions"
-                , 2
-                , Transactions.getContent().size());
+                WEEK_NO2));
+
+        when(mockTransactionRepository.findAll(any(Pageable.class))).thenReturn(new PageImpl<>(transactionRecords));
+        Page<Transaction> transactions = testTransactionService.getTransactions(mockPageable);
+        Assert.assertNotNull("getTransactions returned null", transactions);
+        Assert.assertNotNull("Transactions body does not exist", transactions.getContent());
+        Assert.assertEquals("not the correct number of Transactions", 2, transactions.getContent().size());
     }
 
     @Test
@@ -155,32 +145,23 @@ public class TransactionServiceTest {
                 COUPON_DISC,
                 RETAIL_DISC,
                 TRANS_TIME,
-                WEEK_NO
-        );
+                WEEK_NO);
 
-        Transaction Transaction = testTransactionRecordTransactionConverter.convert(mockTransactionRecord);
+        Transaction transaction = testTransactionRecordTransactionConverter.convert(mockTransactionRecord);
 
-        Assert.assertEquals("The Id was incorrectly converted", ID, Transaction.getId());
-        Assert.assertEquals("The basketId was incorrectly converted", BASKET_ID, Transaction.getBasketId());
-        Assert.assertEquals("The householdKey was incorrectly converted" , HOUSEHOLD_KEY, Transaction.getHouseholdKey());
-        Assert.assertEquals("The coupon discount was incorrectly converted", COUPON_DISC, Transaction.getCouponDisc(), 0);
-        Assert.assertEquals("The day was incorrectly converted", DAY, Transaction.getDay());
-        Assert.assertEquals("The productId was incorrectly converted", PRODUCT_ID, Transaction.getProductId());
-        Assert.assertEquals("The quantity was incorrectly converted", QUANTITY, Transaction.getQuantity());
-        Assert.assertEquals("The salesValue was incorrectly converted", SALES_VALUE, Transaction.getSalesValue(), 0);
-        Assert.assertEquals("The storeId was incorrectly converted", STORE_ID, Transaction.getStoreId());
-        Assert.assertEquals("The couponMatchDiscount was incorrectly converted", COUPON_MATCH_DISCOUNT, Transaction.getCouponMatchDiscount(), 0);
-        Assert.assertEquals("The retailDsic was incorrectly converted", RETAIL_DISC, Transaction.getRetailDisc(), 0);
-        Assert.assertEquals("The transTime was incorrectly converted", TRANS_TIME, Transaction.getTransTime());
-        Assert.assertEquals("The weekNo was incorrectly converted", WEEK_NO, Transaction.getWeekNo());
-
-
-
-
-
-
-
-
+        Assert.assertEquals("The Id was incorrectly converted", ID, transaction.getId());
+        Assert.assertEquals("The basketId was incorrectly converted", BASKET_ID, transaction.getBasketId());
+        Assert.assertEquals("The householdKey was incorrectly converted" , HOUSEHOLD_KEY, transaction.getHouseholdKey());
+        Assert.assertEquals("The coupon discount was incorrectly converted", COUPON_DISC, transaction.getCouponDisc(), 0);
+        Assert.assertEquals("The day was incorrectly converted", DAY, transaction.getDay());
+        Assert.assertEquals("The productId was incorrectly converted", PRODUCT_ID, transaction.getProductId());
+        Assert.assertEquals("The quantity was incorrectly converted", QUANTITY, transaction.getQuantity());
+        Assert.assertEquals("The salesValue was incorrectly converted", SALES_VALUE, transaction.getSalesValue(), 0);
+        Assert.assertEquals("The storeId was incorrectly converted", STORE_ID, transaction.getStoreId());
+        Assert.assertEquals("The couponMatchDiscount was incorrectly converted", COUPON_MATCH_DISCOUNT, transaction.getCouponMatchDiscount(), 0);
+        Assert.assertEquals("The retailDsic was incorrectly converted", RETAIL_DISC, transaction.getRetailDisc(), 0);
+        Assert.assertEquals("The transTime was incorrectly converted", TRANS_TIME, transaction.getTransTime());
+        Assert.assertEquals("The weekNo was incorrectly converted", WEEK_NO, transaction.getWeekNo());
     }
 
 }

@@ -1,8 +1,5 @@
 package com.e451.domain;
 
-/**
- * Created by e978726 on 2/24/2017.
- */
 public class Transaction {
     private Long id;
     private Long householdKey;
@@ -18,7 +15,10 @@ public class Transaction {
     private Long transTime;
     private Long weekNo;
 
-    public Transaction(Long id, Long householdKey, Long basketId, Long day, Long productId, Long quantity, Double salesValue, Long storeId, Double couponMatchDiscount, Double couponDisc, Double retailDisc, Long transTime, Long weekNo) {
+    public Transaction(Long id, Long householdKey, Long basketId, Long day,
+                       Long productId, Long quantity, Double salesValue,
+                       Long storeId, Double couponMatchDiscount, Double couponDisc,
+                       Double retailDisc, Long transTime, Long weekNo) {
         this.id = id;
         this.householdKey = householdKey;
         this.basketId = basketId;

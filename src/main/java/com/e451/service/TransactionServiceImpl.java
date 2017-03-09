@@ -9,10 +9,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-/**
- * Created by e978726 on 2/27/2017.
- */
-
 @Service
 public class TransactionServiceImpl implements TransactionService {
 

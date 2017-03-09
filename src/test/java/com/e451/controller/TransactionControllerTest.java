@@ -10,9 +10,6 @@ import org.springframework.data.web.PagedResourcesAssembler;
 
 import static org.mockito.Mockito.mock;
 
-/**
- * Created by e978726 on 2/28/2017.
- */
 public class TransactionControllerTest {
     private TransactionController testTransactionController;
     private Pageable mockPageable = mock(Pageable.class);

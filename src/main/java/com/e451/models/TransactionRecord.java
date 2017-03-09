@@ -1,11 +1,6 @@
 package com.e451.models;
 
 import javax.persistence.*;
-import java.util.Date;
-
-/**
- * Created by e978726 on 2/26/2017.
- */
 
 @Entity()
 @Table(name = "transaction_data")
@@ -29,7 +24,10 @@ public class TransactionRecord {
 
     public TransactionRecord() {}
 
-    public TransactionRecord(Long id, Long householdKey, Long basketId, Long day, Long productId, Long quantity, Double salesValue, Long storeId, Double couponMatchDiscount, Double couponDisc, Double retailDisc, Long transTime, Long weekNo) {
+    public TransactionRecord(Long id, Long householdKey, Long basketId, Long day,
+                             Long productId, Long quantity, Double salesValue,
+                             Long storeId, Double couponMatchDiscount, Double couponDisc,
+                             Double retailDisc, Long transTime, Long weekNo) {
         this.id = id;
         this.householdKey = householdKey;
         this.basketId = basketId;
