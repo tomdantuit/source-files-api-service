@@ -1,7 +1,7 @@
 package com.e451.repository;
 
 
-import com.e451.models.CouponRedemptionRecord;
+import com.e451.model.CouponRedemptionRecord;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 

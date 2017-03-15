@@ -26,7 +26,7 @@ public class CampaignDescriptionController {
         this.campaignDescriptionService = CampaignDescriptionService;
     }
 
-    @RequestMapping(path = "/CampaignDescriptions", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
+    @RequestMapping(path = "/campaignDescription", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
     public HttpEntity<PagedResources<CampaignDescription>> getCampaignDescriptions(Pageable pageable
             , PagedResourcesAssembler<CampaignDescription> pageResourceAssembler) {
         Page<CampaignDescription> CampaignDescriptions = campaignDescriptionService.getCampaignDescriptions(pageable);

@@ -4,13 +4,13 @@ package com.e451.domain;
 public class Coupon {
 
     private long campaign;
-    private long coupon_upc;
-    private long prod_id;
+    private long couponUpc;
+    private long prodId;
 
-    public Coupon(long campaign, long coupon_upc, long prod_id) {
+    public Coupon(long campaign, long couponUpc, long prodId) {
         this.campaign = campaign;
-        this.coupon_upc = coupon_upc;
-        this.prod_id = prod_id;
+        this.couponUpc = couponUpc;
+        this.prodId = prodId;
     }
 
     public long getCampaign() {
@@ -21,20 +21,20 @@ public class Coupon {
         this.campaign = campaign;
     }
 
-    public long getCoupon_upc() {
-        return coupon_upc;
+    public long getCouponUpc() {
+        return couponUpc;
     }
 
-    public void setCoupon_upc(long coupon_upc) {
-        this.coupon_upc = coupon_upc;
+    public void setCouponUpc(long couponUpc) {
+        this.couponUpc = couponUpc;
     }
 
-    public long getProd_id() {
-        return prod_id;
+    public long getProdId() {
+        return prodId;
     }
 
-    public void setProd_id(long prod_id) {
-        this.prod_id = prod_id;
+    public void setProdId(long prodId) {
+        this.prodId = prodId;
     }
 
 }
