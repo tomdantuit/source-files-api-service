@@ -4,12 +4,12 @@ public class CouponRedemption {
     private Long householdKey;
     private String day;
     private String couponUpc;
-    private String campaign;
+    private Long campaign;
 
     public CouponRedemption() {
     }
 
-    public CouponRedemption(Long householdKey, String day, String couponUpc, String campaign) {
+    public CouponRedemption(Long householdKey, String day, String couponUpc, Long campaign) {
         this.householdKey = householdKey;
         this.day = day;
         this.couponUpc = couponUpc;
@@ -40,11 +40,11 @@ public class CouponRedemption {
         this.couponUpc = couponUpc;
     }
 
-    public String getCampaign() {
+    public Long getCampaign() {
         return campaign;
     }
 
-    public void setCampaign(String campaign) {
+    public void setCampaign(Long campaign) {
         this.campaign = campaign;
     }
 }
