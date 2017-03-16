@@ -7,6 +7,8 @@
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
     <include file="1.0_create_table_coupon_redempt.xml"
              relativeToChangelogFile="true"/>
+    <include file="1.0_create_table_campaign_membership.xml"
+             relativeToChangelogFile="true"/>
     <include file="1.0_create_table_product.xml"
              relativeToChangelogFile="true"/>
 </databaseChangeLog>
