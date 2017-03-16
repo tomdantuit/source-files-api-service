@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.7"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.7
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.7.xsd">
+    <changeSet id="v1-create-table-coupon" author="tomd8451">
+        <comment>This table lists all the coupons sent to customers as part of a campaign, as well as the products for which each coupon is redeemable.</comment>
+        <createTable tableName="COUPON"
+                     remarks="Lists the campaigns received by each household in the study. Each household received a different set of campaigns.">
+            <column name="CAMPAIGN"
+                    type="BIGINT"
+                    remarks="Number that uniquely identifies each campaign. Ranges 1 - 30"/>
+            <column name="COUPON_UPC"
+                    type="BIGINT"
+                    remarks="Uniquely identifies each coupon (unique to household and campaign)"/>
+            <column name="PRODUCT_ID"
+                    type="BIGINT"
+                    remarks="Number that uniquely identifies each product"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
