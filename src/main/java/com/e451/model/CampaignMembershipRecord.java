@@ -9,6 +9,7 @@ public class CampaignMembershipRecord {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
+    @Column(name = "campaign")
     private Long campaignId;
     private Long hshdKey;
     private String description;
