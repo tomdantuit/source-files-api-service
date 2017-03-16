@@ -9,4 +9,6 @@
              relativeToChangelogFile="true"/>
     <include file="1.0_create_table_product.xml"
              relativeToChangelogFile="true"/>
+    <include file="1.0_create_table_coupon.xml"
+             relativeToChangelogFile="true"/>
 </databaseChangeLog>
