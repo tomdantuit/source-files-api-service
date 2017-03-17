@@ -7,16 +7,17 @@ import javax.persistence.*;
 public class CouponRedemptionRecord {
 
     @Id
+    @Column(name="hshd_key")
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long householdKey;
     private String day;
     private String couponUpc;
-    private String campaign;
+    private Long campaign;
 
     public CouponRedemptionRecord() {
     }
 
-    public CouponRedemptionRecord(Long householdKey, String day, String couponUpc, String campaign) {
+    public CouponRedemptionRecord(Long householdKey, Long campaign, String couponUpc, String day) {
         this.householdKey = householdKey;
         this.day = day;
         this.couponUpc = couponUpc;
@@ -47,11 +48,11 @@ public class CouponRedemptionRecord {
         this.couponUpc = couponUpc;
     }
 
-    public String getCampaign() {
+    public Long getCampaign() {
         return campaign;
     }
 
-    public void setCampaign(String campaign) {
+    public void setCampaign(Long campaign) {
         this.campaign = campaign;
     }
 }
