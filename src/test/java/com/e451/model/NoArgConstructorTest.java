@@ -1,6 +1,6 @@
 package com.e451.model;
 
-import com.e451.models.HouseholdDemographicRecord;
+import com.e451.model.HouseholdDemographicRecord;
 import org.junit.Assert;
 import org.junit.Test;
 

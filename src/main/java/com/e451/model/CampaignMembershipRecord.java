@@ -11,14 +11,14 @@ public class CampaignMembershipRecord {
     private Long id;
     @Column(name = "campaign")
     private Long campaignId;
-    private Long hshdKey;
+    private Long householdKey;
     private String description;
 
     public CampaignMembershipRecord() {}
 
-    public CampaignMembershipRecord(Long id, Long hshdKey, String description, Long campaignId) {
+    public CampaignMembershipRecord(Long id, Long householdKey, String description, Long campaignId) {
         this.id = id;
-        this.hshdKey = hshdKey;
+        this.householdKey = householdKey;
         this.description = description;
         this.campaignId = campaignId;
     }
@@ -39,12 +39,12 @@ public class CampaignMembershipRecord {
         this.id = id;
     }
 
-    public Long getHshdKey() {
-        return hshdKey;
+    public Long getHouseholdKey() {
+        return householdKey;
     }
 
-    public void setHshdKey(Long hshdKey) {
-        this.hshdKey = hshdKey;
+    public void setHouseholdKey(Long householdKey) {
+        this.householdKey = householdKey;
     }
 
     public String getDescription() {
