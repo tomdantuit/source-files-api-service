@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.7"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.7
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.7.xsd">
+    <changeSet id="v1-create-table-campaign-membership" author="tomd8451">
+        <comment>Creates the intial version of the PRODUCT table</comment>
+        <createTable tableName="CAMPAIGN_MEMBERSHIP"
+                     remarks="Lists the campaigns received by each household in the study. Each household received a different set of campaigns.">
+            <column name="CAMPAIGN"
+                    type="BIGINT"
+                    remarks="Number that uniquely identifies each campaign. Ranges 1 - 30"/>
+            <column name="HSHD_KEY"
+                    type="BIGINT"
+                    remarks="Uniquely identifies each household"/>
+            <column name="DESCRIPTION"
+                    type="java.sql.Types.VARCHAR(200)"
+                    remarks="Type of campaign (TypeA, TypeB or TypeC)"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

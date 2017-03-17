@@ -25,12 +25,12 @@ public class CouponRedemptionServiceTest {
     private final Long COUPON_REDEMPTION_KEY_1 = new Long(1);
     private final String COUPON_REDEMPTION_DAY_1 = "12/1/2016";
     private final String COUPON_REDEMPTION_UPC_1 = "11111111";
-    private final String COUPON_REDEMPTION_CAMPAIGN_1 = "Mega Event";
+    private final Long COUPON_REDEMPTION_CAMPAIGN_1 = new Long(1);
 
     private final Long COUPON_REDEMPTION_KEY_2 = new Long(2);
     private final String COUPON_REDEMPTION_DAY_2 = "10/1/2016";
     private final String COUPON_REDEMPTION_UPC_2 = "2222222";
-    private final String COUPON_REDEMPTION_CAMPAIGN_2 = "LCM Event";
+    private final Long COUPON_REDEMPTION_CAMPAIGN_2 = new Long(2);
 
     private CouponRedemptionServiceImpl testCouponRedemptionService;
     private Pageable mockPageable = mock(Pageable.class);
@@ -91,9 +91,9 @@ public class CouponRedemptionServiceTest {
         Assert.assertNotNull(testCouponRedemptionRecordCouponRedemptionConverter);
 
         CouponRedemptionRecord mockCouponRedemptionRecord = new CouponRedemptionRecord(COUPON_REDEMPTION_KEY_1
-                , COUPON_REDEMPTION_DAY_1
+                , COUPON_REDEMPTION_CAMPAIGN_1
                 , COUPON_REDEMPTION_UPC_1
-                , COUPON_REDEMPTION_CAMPAIGN_1);
+                , COUPON_REDEMPTION_DAY_1);
 
         CouponRedemption couponRedemption = testCouponRedemptionRecordCouponRedemptionConverter.convert(mockCouponRedemptionRecord);
 
