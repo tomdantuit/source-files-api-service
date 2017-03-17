@@ -12,24 +12,15 @@
             <column autoIncrement="true"
                     name="ID"
                     type="BIGINT"
-                    remarks="Number that uniquely identifies each product">
-                <constraints nullable="false"
-                             primaryKey="true"
-                             primaryKeyName="ID"/>
+                    remarks="Number that uniquely identifies each causal record">
             </column>
             <column name="PRODUCT_ID"
                     type="BIGINT"
                     remarks="Number that uniquely identifies each product">
-                <!--<constraints nullable="false"-->
-                             <!--foreignKeyName="FK_CAUSAL_PRODUCT_ID"-->
-                             <!--references="PRODUCT(PRODUCT_ID)"/>-->
             </column>
             <column name="STORE_ID"
                     type="BIGINT"
                     remarks="Number that uniquely identifies each store">
-                <!--<constraints nullable="false"-->
-                             <!--foreignKeyName="FK_CAUSAL_STORE_ID"-->
-                             <!--references="STORE(STORE_ID)"/>-->
             </column>
             <column name="WEEK_NO"
                     type="INT"
