@@ -22,7 +22,7 @@ public class CampaignMembershipServiceImpl implements CampaignMembershipService 
         public CampaignMembership convert(CampaignMembershipRecord campaignMembershipRecord) {
 
             return new CampaignMembership(campaignMembershipRecord.getId()
-                            , campaignMembershipRecord.getHshdKey()
+                            , campaignMembershipRecord.getHouseholdKey()
                             , campaignMembershipRecord.getDescription()
                             , campaignMembershipRecord.getCampaignId());
         }

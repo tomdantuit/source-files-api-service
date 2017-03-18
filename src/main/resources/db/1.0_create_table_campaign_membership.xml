@@ -12,7 +12,7 @@
             <column name="CAMPAIGN"
                     type="BIGINT"
                     remarks="Number that uniquely identifies each campaign. Ranges 1 - 30"/>
-            <column name="HSHD_KEY"
+            <column name="HOUSEHOLD_KEY"
                     type="BIGINT"
                     remarks="Uniquely identifies each household"/>
             <column name="DESCRIPTION"
