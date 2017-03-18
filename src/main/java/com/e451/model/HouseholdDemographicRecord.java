@@ -8,7 +8,7 @@ public class HouseholdDemographicRecord {
 
     @Id
     @Column(name="HOUSEHOLD_KEY")
-    private Long hshdKey;
+    private Long householdKey;
     @Column(name="AGE_DESC")
     private String ageDescription;
     @Column(name="MARITAL_STATUS_CODE")
@@ -26,8 +26,8 @@ public class HouseholdDemographicRecord {
 
     public HouseholdDemographicRecord() {}
 
-    public HouseholdDemographicRecord(Long hshdKey, String ageDescription, String maritalStatusCode, String incomeDesc, String homeownerDesc, String householdCompositionDesc, String householdSizeDesc, String kidCategoryDesc) {
-        this.hshdKey = hshdKey;
+    public HouseholdDemographicRecord(Long householdKey, String ageDescription, String maritalStatusCode, String incomeDesc, String homeownerDesc, String householdCompositionDesc, String householdSizeDesc, String kidCategoryDesc) {
+        this.householdKey = householdKey;
         this.ageDescription = ageDescription;
         this.maritalStatusCode = maritalStatusCode;
         this.incomeDesc = incomeDesc;
@@ -37,12 +37,12 @@ public class HouseholdDemographicRecord {
         this.kidCategoryDesc = kidCategoryDesc;
     }
 
-    public Long getHshdKey() {
-        return hshdKey;
+    public Long getHouseholdKey() {
+        return householdKey;
     }
 
-    public void setHshdKey(Long hshdKey) {
-        this.hshdKey = hshdKey;
+    public void setHouseholdKey(Long householdKey) {
+        this.householdKey = householdKey;
     }
 
     public String getAgeDescription() {

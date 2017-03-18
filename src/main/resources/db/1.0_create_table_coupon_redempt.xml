@@ -9,14 +9,17 @@
         <comment>Creates the intial version of the PRODUCT table</comment>
         <createTable tableName="COUPON_REDEMPT"
                      remarks="This table identifies the coupons that each household redeemed.">
-            <column name="HSHD_KEY"
+            <column name="ID"
+                    type="BIGINT"
+                    remarks="Number uniquely identifies each coupon redemption record"/>
+            <column name="HOUSEHOLD_KEY"
                     type="BIGINT"
                     remarks="Number uniquely identifies each household"/>
             <column name="DAY"
                     type="java.sql.Types.VARCHAR(200)"
                     remarks="Day when transaction occurred"/>
             <column name="COUPON_UPC"
-                    type="java.sql.Types.VARCHAR(200)"
+                    type="BIGINT"
                     remarks="Type of campaign (TypeA, TypeB or TypeC)"/>
             <column name="CAMPAIGN"
                     type="BIGINT"

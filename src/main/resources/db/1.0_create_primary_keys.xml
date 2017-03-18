@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.7"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.7
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.7.xsd">
+    <changeSet id="v1-create-primary-keys" author="tomd8451">
+        <addPrimaryKey tableName="CAMPAIGN_MEMBERSHIP"
+                       constraintName="PK_CAMPAIGN"
+                       columnNames="ID"/>
+
+        <addPrimaryKey tableName="CAMPAIGN_DESC"
+                       constraintName="PK_CAMPAIGN_DESC"
+                       columnNames="CAMPAIGN"/>
+
+        <addPrimaryKey tableName="COUPON_REDEMPT"
+                       constraintName="PK_COUPON_REDEMPT"
+                       columnNames="ID"/>
+
+        <addPrimaryKey tableName="HH_DEMOGRAPHIC"
+                       constraintName="PK_HH_DEMOGRAPHIC"
+                       columnNames="HOUSEHOLD_KEY"/>
+
+        <addPrimaryKey tableName="COUPON"
+                       constraintName="PK_COUPON"
+                       columnNames="ID"/>
+
+        <addPrimaryKey tableName="PRODUCT"
+                       constraintName="PK_PRODUCT"
+                       columnNames="PRODUCT_ID"/>
+
+        <addPrimaryKey tableName="CAUSAL_DATA"
+                       constraintName="PK_CAUSAL_DATA"
+                       columnNames="ID"/>
+    </changeSet>
+</databaseChangeLog>
+

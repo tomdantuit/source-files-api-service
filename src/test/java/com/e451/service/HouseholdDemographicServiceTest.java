@@ -129,7 +129,7 @@ public class HouseholdDemographicServiceTest {
 
         Assert.assertEquals("The HouseholdKey was incorrectly converted"
                 , HOUSEHOLD_DEMOGRAPHIC_HOUSEHOLD_KEY_1
-                , HouseholdDemographic.getHshdKey());
+                , HouseholdDemographic.getHouseholdKey());
         Assert.assertEquals("The AgeDescription was incorrectly converted"
                 , HOUSEHOLD_DEMOGRAPHIC_AGE_DESC_1
                 , HouseholdDemographic.getAgeDescription());
@@ -138,18 +138,18 @@ public class HouseholdDemographicServiceTest {
                 , HouseholdDemographic.getMaritalStatusCode());
         Assert.assertEquals("The IncomeDescription was incorrectly converted"
                 , HOUSEHOLD_DEMOGRAPHIC_INCOME_DESC_1
-                , HouseholdDemographic.getIncomeDesc());
+                , HouseholdDemographic.getIncomeDescription());
         Assert.assertEquals("The AgeDescription was incorrectly converted"
                 , HOUSEHOLD_DEMOGRAPHIC_HOMEOWNER_DESC_1
-                , HouseholdDemographic.getHomeownerDesc());
+                , HouseholdDemographic.getHomeownerDescription());
         Assert.assertEquals("The HouseholdCompositionDescription was incorrectly converted"
                 , HOUSEHOLD_DEMOGRAPHIC_HOUSEHOLD_COMP_DESC_1
-                , HouseholdDemographic.getHouseholdCompositionDesc());
+                , HouseholdDemographic.getHouseholdCompositionDescription());
         Assert.assertEquals("The HouseholdSizeDescription was incorrectly converted"
                 , HOUSEHOLD_DEMOGRAPHIC_HOUSEHOLD_SIZE_DESC_1
-                , HouseholdDemographic.getHouseholdSizeDesc());
+                , HouseholdDemographic.getHouseholdSizeDescription());
         Assert.assertEquals("The KidCategoryDescription was incorrectly converted"
                 , HOUSEHOLD_DEMOGRAPHIC_KID_CATEGORY_DESC_1
-                , HouseholdDemographic.getKidCategoryDesc());
+                , HouseholdDemographic.getKidCategoryDescription());
     }
 }

@@ -27,7 +27,8 @@ public class CouponRedemptionServiceImpl implements CouponRedemptionService {
             return new CouponRedemption(couponRedemptionRecord.getHouseholdKey(),
                     couponRedemptionRecord.getDay(),
                     couponRedemptionRecord.getCouponUpc(),
-                    couponRedemptionRecord.getCampaign());
+                    couponRedemptionRecord.getCampaign(),
+                    couponRedemptionRecord.getId());
         }
     };
 

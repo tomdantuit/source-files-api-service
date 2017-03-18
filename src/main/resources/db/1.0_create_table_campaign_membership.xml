@@ -9,6 +9,9 @@
         <comment>Creates the intial version of the PRODUCT table</comment>
         <createTable tableName="CAMPAIGN_MEMBERSHIP"
                      remarks="Lists the campaigns received by each household in the study. Each household received a different set of campaigns.">
+            <column name="ID"
+                    type="BIGINT"
+                    remarks="Uniquely identifies a campaign membership record"/>
             <column name="CAMPAIGN"
                     type="BIGINT"
                     remarks="Number that uniquely identifies each campaign. Ranges 1 - 30"/>

@@ -2,29 +2,31 @@ package com.e451.domain;
 
 public class HouseholdDemographic {
 
-    private Long hshdKey;
+    private Long householdKey;
     private String ageDescription;
     private String maritalStatusCode;
-    private String incomeDesc;
-    private String homeownerDesc;
-    private String householdCompositionDesc;
-    private String householdSizeDesc;
-    private String kidCategoryDesc;
+    private String incomeDescription;
+    private String homeownerDescription;
+    private String householdCompositionDescription;
+    private String householdSizeDescription;
+    private String kidCategoryDescription;
 
-    public HouseholdDemographic(Long hshdKey, String ageDescription, String maritalStatusCode, String incomeDesc, String homeownerDesc, String householdCompositionDesc, String householdSizeDesc, String kidCategoryDesc) {
-        this.hshdKey = hshdKey;
+    public HouseholdDemographic(Long householdKey, String ageDescription, String maritalStatusCode,
+                                String incomeDescription, String homeownerDescription, String householdCompositionDescription,
+                                String householdSizeDescription, String kidCategoryDescription) {
+        this.householdKey = householdKey;
         this.ageDescription = ageDescription;
         this.maritalStatusCode = maritalStatusCode;
-        this.incomeDesc = incomeDesc;
-        this.homeownerDesc = homeownerDesc;
-        this.householdCompositionDesc = householdCompositionDesc;
-        this.householdSizeDesc = householdSizeDesc;
-        this.kidCategoryDesc = kidCategoryDesc;
+        this.incomeDescription = incomeDescription;
+        this.homeownerDescription = homeownerDescription;
+        this.householdCompositionDescription = householdCompositionDescription;
+        this.householdSizeDescription = householdSizeDescription;
+        this.kidCategoryDescription = kidCategoryDescription;
     }
 
-    public Long getHshdKey() { return hshdKey; }
+    public Long getHouseholdKey() { return householdKey; }
 
-    public void setHshdKey(Long hshdKey) { this.hshdKey = hshdKey; }
+    public void setHouseholdKey(Long householdKey) { this.householdKey = householdKey; }
 
     public String getAgeDescription() {
         return ageDescription;
@@ -42,43 +44,43 @@ public class HouseholdDemographic {
         this.maritalStatusCode = maritalStatusCode;
     }
 
-    public String getIncomeDesc() {
-        return incomeDesc;
+    public String getIncomeDescription() {
+        return incomeDescription;
     }
 
-    public void setIncomeDesc(String incomeDesc) {
-        this.incomeDesc = incomeDesc;
+    public void setIncomeDescription(String incomeDescription) {
+        this.incomeDescription = incomeDescription;
     }
 
-    public String getHomeownerDesc() {
-        return homeownerDesc;
+    public String getHomeownerDescription() {
+        return homeownerDescription;
     }
 
-    public void setHomeownerDesc(String homeownerDesc) {
-        this.homeownerDesc = homeownerDesc;
+    public void setHomeownerDescription(String homeownerDescription) {
+        this.homeownerDescription = homeownerDescription;
     }
 
-    public String getHouseholdCompositionDesc() {
-        return householdCompositionDesc;
+    public String getHouseholdCompositionDescription() {
+        return householdCompositionDescription;
     }
 
-    public void setHouseholdCompositionDesc(String householdCompositionDesc) {
-        this.householdCompositionDesc = householdCompositionDesc;
+    public void setHouseholdCompositionDescription(String householdCompositionDescription) {
+        this.householdCompositionDescription = householdCompositionDescription;
     }
 
-    public String getHouseholdSizeDesc() {
-        return householdSizeDesc;
+    public String getHouseholdSizeDescription() {
+        return householdSizeDescription;
     }
 
-    public void setHouseholdSizeDesc(String householdSizeDesc) {
-        this.householdSizeDesc = householdSizeDesc;
+    public void setHouseholdSizeDescription(String householdSizeDescription) {
+        this.householdSizeDescription = householdSizeDescription;
     }
 
-    public String getKidCategoryDesc() {
-        return kidCategoryDesc;
+    public String getKidCategoryDescription() {
+        return kidCategoryDescription;
     }
 
-    public void setKidCategoryDesc(String kidCategoryDesc) {
-        this.kidCategoryDesc = kidCategoryDesc;
+    public void setKidCategoryDescription(String kidCategoryDescription) {
+        this.kidCategoryDescription = kidCategoryDescription;
     }
 }
