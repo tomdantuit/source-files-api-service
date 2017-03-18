@@ -1,7 +1,7 @@
 package com.e451.service;
 
 import com.e451.domain.HouseholdDemographic;
-import com.e451.models.HouseholdDemographicRecord;
+import com.e451.model.HouseholdDemographicRecord;
 import com.e451.repository.HouseholdDemographicRepository;
 import org.junit.Assert;
 import org.junit.Before;

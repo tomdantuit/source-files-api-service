@@ -1,7 +1,7 @@
 package com.e451.service;
 
 import com.e451.domain.Transaction;
-import com.e451.models.TransactionRecord;
+import com.e451.model.TransactionRecord;
 import com.e451.repository.TransactionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;
