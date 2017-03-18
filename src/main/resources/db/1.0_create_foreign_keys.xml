@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.7"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.7
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.7.xsd">
+    <changeSet id="v1-create-foreign-keys" author="tomd8451">
+        <addForeignKeyConstraint baseColumnNames="HOUSEHOLD_KEY"
+                                 baseTableName="CAMPAIGN_MEMBERSHIP"
+                                 constraintName="FK_CAMPAIGN_MEMBERSHIP_HH_DEMOGRAPHIC"
+                                 referencedColumnNames="HOUSEHOLD_KEY"
+                                 referencedTableName="HH_DEMOGRAPHIC"/>
+
+        <addForeignKeyConstraint baseColumnNames="CAMPAIGN"
+                                 baseTableName="CAMPAIGN_MEMBERSHIP"
+                                 constraintName="FK_CAMPAIGN_MEMBERSHIP_CAMPAIGN"
+                                 referencedColumnNames="CAMPAIGN"
+                                 referencedTableName="CAMPAIGN_DESC"/>
+
+        <addForeignKeyConstraint baseColumnNames="CAMPAIGN"
+                                 baseTableName="COUPON_REDEMPT"
+                                 constraintName="FK_COUPON_REDEMPT_CAMPAIGN"
+                                 referencedColumnNames="CAMPAIGN"
+                                 referencedTableName="CAMPAIGN_DESC"/>
+
+        <addForeignKeyConstraint baseColumnNames="HOUSEHOLD_KEY"
+                                 baseTableName="COUPON_REDEMPT"
+                                 constraintName="FK_COUPON_REDEMPT_HH_DEMOGRAPHIC"
+                                 referencedColumnNames="HOUSEHOLD_KEY"
+                                 referencedTableName="HH_DEMOGRAPHIC"/>
+
+        <addForeignKeyConstraint baseColumnNames="COUPON_UPC"
+                                 baseTableName="COUPON_REDEMPT"
+                                 constraintName="FK_COUPON_REDEMPT_COUPON"
+                                 referencedColumnNames="COUPON_UPC"
+                                 referencedTableName="COUPON"/>
+
+        <addForeignKeyConstraint baseColumnNames="CAMPAIGN"
+                                 baseTableName="COUPON"
+                                 constraintName="FK_COUPON_CAMPAIGN_DESC"
+                                 referencedColumnNames="CAMPAIGN"
+                                 referencedTableName="CAMPAIGN_DESC"/>
+
+        <addForeignKeyConstraint baseColumnNames="PRODUCT_ID"
+                                 baseTableName="COUPON"
+                                 constraintName="FK_COUPON_PRODUCT"
+                                 referencedColumnNames="PRODUCT_ID"
+                                 referencedTableName="PRODUCT"/>
+
+        <addForeignKeyConstraint baseColumnNames="PRODUCT_ID"
+                                 baseTableName="CAUSAL_DATA"
+                                 constraintName="FK_CAUSAL_PRODUCT"
+                                 referencedColumnNames="PRODUCT_ID"
+                                 referencedTableName="PRODUCT"/>
+    </changeSet>
+</databaseChangeLog>

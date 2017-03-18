@@ -5,9 +5,9 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.7
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.7.xsd">
-    <changeSet id="v1-create-table-campaign-description" author="tomd8451">
+    <changeSet id="v1-create-table-campaign-desc" author="tomd8451">
         <comment>Creates the intial version of the PRODUCT table</comment>
-        <createTable tableName="CAMPAIGN_DESCRIPTION"
+        <createTable tableName="CAMPAIGN_DESC"
                      remarks="The length of time for which a campaign runs. So, any coupons received as part of a campaign are valid within the dates contained in this table.">
             <column name="CAMPAIGN"
                     type="BIGINT"

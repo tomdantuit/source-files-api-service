@@ -9,7 +9,6 @@
              relativeToChangelogFile="true"/>
     <include file="1.0_create_table_campaign_membership.xml"
              relativeToChangelogFile="true"/>
-             relativeToChangelogFile="true"/>
     <include file="1.0_create_table_coupon_redempt.xml"
              relativeToChangelogFile="true"/>
     <include file="1.0_create_table_campaign_membership.xml"
@@ -19,5 +18,13 @@
     <include file="1.0_create_table_coupon.xml"
              relativeToChangelogFile="true"/>
     <include file="1.0_create_table_causal_data.xml"
+             relativeToChangelogFile="true"/>
+    <include file="1.0_create_table_hh_demographic.xml"
+             relativeToChangelogFile="true"/>
+    <include file="1.0_create_unique_constraints.xml"
+             relativeToChangelogFile="true"/>
+    <include file="1.0_create_primary_keys.xml"
+             relativeToChangelogFile="true"/>
+    <include file="1.0_create_foreign_keys.xml"
              relativeToChangelogFile="true"/>
 </databaseChangeLog>

@@ -24,13 +24,15 @@ public class CouponRedemptionServiceTest {
     // Constants for testing
     private final Long COUPON_REDEMPTION_KEY_1 = new Long(1);
     private final String COUPON_REDEMPTION_DAY_1 = "12/1/2016";
-    private final String COUPON_REDEMPTION_UPC_1 = "11111111";
+    private final Long COUPON_REDEMPTION_UPC_1 = new Long(1);
     private final Long COUPON_REDEMPTION_CAMPAIGN_1 = new Long(1);
+    private final Long COUPON_REDEMPTION_HSHD_KEY_1 = new Long(1);
 
     private final Long COUPON_REDEMPTION_KEY_2 = new Long(2);
     private final String COUPON_REDEMPTION_DAY_2 = "10/1/2016";
-    private final String COUPON_REDEMPTION_UPC_2 = "2222222";
+    private final Long COUPON_REDEMPTION_UPC_2 = new Long(1);
     private final Long COUPON_REDEMPTION_CAMPAIGN_2 = new Long(2);
+    private final Long COUPON_REDEMPTION_HSHD_KEY_2 = new Long(2);
 
     private CouponRedemptionServiceImpl testCouponRedemptionService;
     private Pageable mockPageable = mock(Pageable.class);
@@ -51,10 +53,11 @@ public class CouponRedemptionServiceTest {
 
     @Test
     public void testCouponRedemptionServiceShouldReturnCouponRedemptions() {
-        couponRedemptionRecords.add(new CouponRedemptionRecord(COUPON_REDEMPTION_KEY_1
+        couponRedemptionRecords.add(new CouponRedemptionRecord(COUPON_REDEMPTION_HSHD_KEY_1
                 , COUPON_REDEMPTION_CAMPAIGN_1
-                ,COUPON_REDEMPTION_UPC_1
-                , COUPON_REDEMPTION_DAY_1));
+                , COUPON_REDEMPTION_UPC_1
+                , COUPON_REDEMPTION_DAY_1
+                , COUPON_REDEMPTION_KEY_1));
         when(couponRedemptionRepository.findAll(any(Pageable.class))).thenReturn(new PageImpl<>(couponRedemptionRecords));
         Page<CouponRedemption> couponRedemptions = testCouponRedemptionService.getCouponRedemptions(mockPageable);
         Assert.assertNotNull("getCouponRedemptions returned null", couponRedemptions);
@@ -65,14 +68,16 @@ public class CouponRedemptionServiceTest {
 
     @Test
     public void setTestCouponRedemptionServiceShouldReturnTwoCouponRedemptions() {
-        couponRedemptionRecords.add(new CouponRedemptionRecord(COUPON_REDEMPTION_KEY_1
+        couponRedemptionRecords.add(new CouponRedemptionRecord(COUPON_REDEMPTION_HSHD_KEY_1
                 , COUPON_REDEMPTION_CAMPAIGN_1
-                ,COUPON_REDEMPTION_UPC_1
-                , COUPON_REDEMPTION_DAY_1));
-        couponRedemptionRecords.add(new CouponRedemptionRecord(COUPON_REDEMPTION_KEY_2
+                , COUPON_REDEMPTION_UPC_1
+                , COUPON_REDEMPTION_DAY_1
+                , COUPON_REDEMPTION_KEY_1));
+        couponRedemptionRecords.add(new CouponRedemptionRecord(COUPON_REDEMPTION_HSHD_KEY_2
                 , COUPON_REDEMPTION_CAMPAIGN_2
-                ,COUPON_REDEMPTION_UPC_2
-                , COUPON_REDEMPTION_DAY_2));
+                , COUPON_REDEMPTION_UPC_2
+                , COUPON_REDEMPTION_DAY_2
+                , COUPON_REDEMPTION_KEY_2));
         when(couponRedemptionRepository.findAll(any(Pageable.class))).thenReturn(new PageImpl<>(couponRedemptionRecords));
         Page<CouponRedemption> couponRedemptions = testCouponRedemptionService.getCouponRedemptions(mockPageable);
         Assert.assertNotNull("getCouponRedemptions returned null", couponRedemptions);
@@ -90,21 +95,26 @@ public class CouponRedemptionServiceTest {
 
         Assert.assertNotNull(testCouponRedemptionRecordCouponRedemptionConverter);
 
-        CouponRedemptionRecord mockCouponRedemptionRecord = new CouponRedemptionRecord(COUPON_REDEMPTION_KEY_1
+        CouponRedemptionRecord mockCouponRedemptionRecord = new CouponRedemptionRecord(COUPON_REDEMPTION_HSHD_KEY_1
                 , COUPON_REDEMPTION_CAMPAIGN_1
                 , COUPON_REDEMPTION_UPC_1
-                , COUPON_REDEMPTION_DAY_1);
+                , COUPON_REDEMPTION_DAY_1
+                , COUPON_REDEMPTION_KEY_1);
 
         CouponRedemption couponRedemption = testCouponRedemptionRecordCouponRedemptionConverter.convert(mockCouponRedemptionRecord);
 
-        Assert.assertEquals("The Household Key was incorrectly converted", COUPON_REDEMPTION_KEY_1, couponRedemption.getHouseholdKey());
+        Assert.assertEquals("The Household Key was incorrectly converted"
+                , COUPON_REDEMPTION_HSHD_KEY_1
+                , couponRedemption.getHouseholdKey());
         Assert.assertEquals("The campaign was incorrectly converted"
                 , COUPON_REDEMPTION_CAMPAIGN_1
                 , couponRedemption.getCampaign());
         Assert.assertEquals("The UPC was incorrectly converted"
                 , COUPON_REDEMPTION_UPC_1
                 , couponRedemption.getCouponUpc());
-
+        Assert.assertEquals("The ID was incorrectly converted"
+                , COUPON_REDEMPTION_KEY_1
+                , couponRedemption.getId());
     }
 
 }

@@ -19,7 +19,7 @@ public class HouseholdDemographicServiceImpl implements HouseholdDemographicServ
 
         @Override
         public HouseholdDemographic convert(HouseholdDemographicRecord householdDemographicRecord) {
-            return new HouseholdDemographic(householdDemographicRecord.getHshdKey(),
+            return new HouseholdDemographic(householdDemographicRecord.getHouseholdKey(),
                     householdDemographicRecord.getAgeDescription(),
                     householdDemographicRecord.getMaritalStatusCode(),
                     householdDemographicRecord.getIncomeDesc(),

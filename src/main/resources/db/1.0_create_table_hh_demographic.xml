@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.7"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.7
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.7.xsd">
+    <changeSet id="v1-create-table-hh-demographic" author="tomd8451">
+        <comment>This table lists all the coupons sent to customers as part of a campaign, as well as the products for which each coupon is redeemable.</comment>
+        <createTable tableName="HH_DEMOGRAPHIC"
+                     remarks="Demographic information for a portion of households.">
+            <column name="HOUSEHOLD_KEY"
+                    type="BIGINT"
+                    remarks="Uniquely identifies each household"/>
+            <column name="AGE_DESC"
+                    type="java.sql.Types.VARCHAR(200)"
+                    remarks="Estimated age range"/>
+            <column name="MARITAL_STATUS_CODE"
+                    type="java.sql.Types.VARCHAR(200)"
+                    remarks="Marital Status (A - Married, B - Single, U - Unknown)"/>
+            <column name="INCOME_DESC"
+                    type="java.sql.Types.VARCHAR(200)"
+                    remarks="Household income"/>
+            <column name="HOMEOWNER_DESC"
+                    type="java.sql.Types.VARCHAR(200)"
+                    remarks="Homeowner, renter, etc..."/>
+            <column name="HH_COMP_DESC"
+                    type="java.sql.Types.VARCHAR(200)"
+                    remarks="Household composition"/>
+            <column name="HOUSEHOLD_SIZE_DESC"
+                    type="java.sql.Types.VARCHAR(200)"
+                    remarks="Size of household up to 5+"/>
+            <column name="KID_CATEGORY_DESC"
+                    type="java.sql.Types.VARCHAR(200)"
+                    remarks="Number of children present up to 3+"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
