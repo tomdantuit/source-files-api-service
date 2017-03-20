@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.7"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.7
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.7.xsd">
+    <changeSet id="v1-create-table-transaction-data" author="eg8451">
+        <comment>Creates the initial version of the transaction data table</comment>
+        <createTable tableName="TRANSACTION_DATA"
+                     remarks="This table contains all products purchased by households within this study.
+                     Each line found in this table is essentially the same line that would be found on a store receipt.">
+            <column autoIncrement="true"
+                    name="ID"
+                    type="BIGINT"
+                    remarks="Uniquely identifies each transaction record"/>
+            <column name="HOUSEHOLD_KEY"
+                    type="BIGINT"
+                    remarks="Uniquely identifies each household"/>
+            <column name="BASKET_ID"
+                    type="BIGINT"
+                    remarks="Uniquely identifies a purchase occasion"/>
+            <column name="DAY"
+                    type="BIGINT"
+                    remarks="Day when the transaction occurred"/>
+            <column name="PRODUCT_ID"
+                    type="BIGINT"
+                    remarks="Uniquely identifies each product"/>
+            <column name="QUANTITY"
+                    type="BIGINT"
+                    remarks="Number of the products purchased during the trip"/>
+            <column name="SALES_VALUE"
+                    type="NUMERIC(38,2)"
+                    remarks="Amount of dollars retailer receives from sale"/>
+            <column name="STORE_ID"
+                    type="BIGINT"
+                    remarks="Uniquely identifies a store"/>
+            <column name="COUPON_MATCH_DISC"
+                    type="NUMERIC(38,2)"
+                    remarks="Discount applied due to retailer's match of manufacturer coupon"/>
+            <column name="COUPON_DISC"
+                    type="NUMERIC(38,2)"
+                    remarks="Discount applied due to manufacturer coupon"/>
+            <column name="RETAIL_DISC"
+                    type="NUMERIC(38,2)"
+                    remarks="Discount applied due to retailer's loyalty card program"/>
+            <column name="TRANS_TIME"
+                    type="BIGINT"
+                    remarks="Time of day when the transaction occurred"/>
+            <column name="WEEK_NO"
+                    type="BIGINT"
+                    remarks="Week of the transaction -- Ranges 1-102"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

@@ -21,6 +21,8 @@
              relativeToChangelogFile="true"/>
     <include file="1.0_create_table_hh_demographic.xml"
              relativeToChangelogFile="true"/>
+    <include file="1.0_create_table_transaction_data.xml"
+             relativeToChangelogFile="true"/>
     <include file="1.0_create_unique_constraints.xml"
              relativeToChangelogFile="true"/>
     <include file="1.0_create_primary_keys.xml"

@@ -53,5 +53,17 @@
                                  constraintName="FK_CAUSAL_PRODUCT"
                                  referencedColumnNames="PRODUCT_ID"
                                  referencedTableName="PRODUCT"/>
+
+        <addForeignKeyConstraint baseColumnNames="PRODUCT_ID"
+                                 baseTableName="TRANSACTION_DATA"
+                                 constraintName="FK_TRANSACTION_PRODUCT"
+                                 referencedColumnNames="PRODUCT_ID"
+                                 referencedTableName="PRODUCT"/>
+
+        <addForeignKeyConstraint baseColumnNames="HOUSEHOLD_KEY"
+                                 baseTableName="TRANSACTION_DATA"
+                                 constraintName="FK_TRANSACTION_HH_DEMOGRAPHIC"
+                                 referencedColumnNames="HOUSEHOLD_KEY"
+                                 referencedTableName="HH_DEMOGRAPHIC"/>
     </changeSet>
 </databaseChangeLog>
