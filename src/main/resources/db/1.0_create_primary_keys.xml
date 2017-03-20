@@ -33,6 +33,10 @@
         <addPrimaryKey tableName="CAUSAL_DATA"
                        constraintName="PK_CAUSAL_DATA"
                        columnNames="ID"/>
+
+        <addPrimaryKey tableName="TRANSACTION_DATA"
+                       constraintName="PK_TRANSACTION_DATA"
+                       columnNames="ID"/>
     </changeSet>
 </databaseChangeLog>
 
