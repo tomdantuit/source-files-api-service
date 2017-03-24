@@ -3,7 +3,7 @@ package com.e451.model;
 import javax.persistence.*;
 
 @Entity()
-@Table(name = "campaign_table")
+@Table(name = "campaign_membership")
 public class CampaignMembershipRecord {
 
     @Id
