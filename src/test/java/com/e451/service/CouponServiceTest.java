@@ -57,7 +57,7 @@ public class CouponServiceTest {
         Coupon coupon = coupons.getContent().get(0);
         Assert.assertEquals("Coupon campaign is incorrect", COUPON_CAMPAIGN_1, coupon.getCampaign());
         Assert.assertEquals("Coupon upc is incorrect", COUPON_UPC_1, coupon.getCouponUpc());
-        Assert.assertEquals("Coupon product id is incorrect", COUPON_PROD_1, coupon.getProdId());
+        Assert.assertEquals("Coupon product id is incorrect", COUPON_PROD_1, coupon.getProductId());
     }
 
     @Test
@@ -91,6 +91,6 @@ public class CouponServiceTest {
 
         Assert.assertEquals("Coupon campaign not converted properly", COUPON_CAMPAIGN_1, coupon.getCampaign());
         Assert.assertEquals("Coupon upc not converted properly", COUPON_UPC_1, coupon.getCouponUpc());
-        Assert.assertEquals("Coupon product id not converted properly", COUPON_PROD_1, coupon.getProdId());
+        Assert.assertEquals("Coupon product id not converted properly", COUPON_PROD_1, coupon.getProductId());
     }
 }

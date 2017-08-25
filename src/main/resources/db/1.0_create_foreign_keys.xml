@@ -30,10 +30,10 @@
                                  referencedColumnNames="HOUSEHOLD_KEY"
                                  referencedTableName="HH_DEMOGRAPHIC"/>
 
-        <addForeignKeyConstraint baseColumnNames="COUPON_UPC"
+        <addForeignKeyConstraint baseColumnNames="COUPON_UPC, CAMPAIGN"
                                  baseTableName="COUPON_REDEMPT"
                                  constraintName="FK_COUPON_REDEMPT_COUPON"
-                                 referencedColumnNames="COUPON_UPC"
+                                 referencedColumnNames="COUPON_UPC, CAMPAIGN"
                                  referencedTableName="COUPON"/>
 
         <addForeignKeyConstraint baseColumnNames="CAMPAIGN"

@@ -5,6 +5,8 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+    <include file="1.0_create_sequences.xml"
+             relativeToChangelogFile="true"/>
     <include file="1.0_create_table_campaign_description.xml"
              relativeToChangelogFile="true"/>
     <include file="1.0_create_table_campaign_membership.xml"
@@ -23,10 +25,8 @@
              relativeToChangelogFile="true"/>
     <include file="1.0_create_table_transaction_data.xml"
              relativeToChangelogFile="true"/>
-    <include file="1.0_create_unique_constraints.xml"
-             relativeToChangelogFile="true"/>
     <include file="1.0_create_primary_keys.xml"
              relativeToChangelogFile="true"/>
-    <include file="1.0_create_foreign_keys.xml"
-             relativeToChangelogFile="true"/>
+    <!--<include file="1.0_create_foreign_keys.xml"-->
+             <!--relativeToChangelogFile="true"/>-->
 </databaseChangeLog>

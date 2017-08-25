@@ -2,7 +2,7 @@ package com.e451.domain;
 
 public class CouponRedemption {
     private Long householdKey;
-    private String day;
+    private Long day;
     private Long couponUpc;
     private Long campaign;
 
@@ -11,7 +11,7 @@ public class CouponRedemption {
     public CouponRedemption() {
     }
 
-    public CouponRedemption(Long householdKey, String day, Long couponUpc, Long campaign, Long id) {
+    public CouponRedemption(Long householdKey, Long day, Long couponUpc, Long campaign, Long id) {
         this.householdKey = householdKey;
         this.day = day;
         this.couponUpc = couponUpc;
@@ -35,11 +35,11 @@ public class CouponRedemption {
         this.householdKey = householdKey;
     }
 
-    public String getDay() {
+    public Long getDay() {
         return day;
     }
 
-    public void setDay(String day) {
+    public void setDay(Long day) {
         this.day = day;
     }
 

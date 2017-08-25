@@ -19,7 +19,7 @@ public class CouponServiceImpl implements CouponService {
         public Coupon convert(CouponRecord couponRecord) {
             return new Coupon(couponRecord.getCampaign()
                 , couponRecord.getCouponUpc()
-                , couponRecord.getProdId());
+                , couponRecord.getProductId());
         }
     };
 

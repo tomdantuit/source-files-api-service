@@ -12,14 +12,14 @@ public class CouponRecord {
     private Long id;
     private Long campaign;
     private Long couponUpc;
-    private Long prodId;
+    private Long productId;
 
     CouponRecord() {}
 
-    public CouponRecord(long campaign, long couponUpc, long prodId, long id) {
+    public CouponRecord(long campaign, long couponUpc, long productId, long id) {
         this.campaign = campaign;
         this.couponUpc = couponUpc;
-        this.prodId = prodId;
+        this.productId = productId;
         this.id = id;
     }
 
@@ -47,11 +47,11 @@ public class CouponRecord {
         this.couponUpc = couponUpc;
     }
 
-    public Long getProdId() {
-        return prodId;
+    public Long getProductId() {
+        return productId;
     }
 
-    public void setProdId(Long prodId) {
-        this.prodId = prodId;
+    public void setProductId(Long productId) {
+        this.productId = productId;
     }
 }

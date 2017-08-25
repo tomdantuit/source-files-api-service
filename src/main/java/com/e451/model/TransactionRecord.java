@@ -16,7 +16,7 @@ public class TransactionRecord {
     private Long quantity;
     private Double salesValue;
     private Long storeId;
-    private Double couponMatchDiscount;
+    private Double couponMatchDisc;
     private Double couponDisc;
     private Double retailDisc;
     private Long transTime;
@@ -26,7 +26,7 @@ public class TransactionRecord {
 
     public TransactionRecord(Long id, Long householdKey, Long basketId, Long day,
                              Long productId, Long quantity, Double salesValue,
-                             Long storeId, Double couponMatchDiscount, Double couponDisc,
+                             Long storeId, Double couponMatchDisc, Double couponDisc,
                              Double retailDisc, Long transTime, Long weekNo) {
         this.id = id;
         this.householdKey = householdKey;
@@ -36,7 +36,7 @@ public class TransactionRecord {
         this.quantity = quantity;
         this.salesValue = salesValue;
         this.storeId = storeId;
-        this.couponMatchDiscount = couponMatchDiscount;
+        this.couponMatchDisc = couponMatchDisc;
         this.couponDisc = couponDisc;
         this.retailDisc = retailDisc;
         this.transTime = transTime;
@@ -107,12 +107,12 @@ public class TransactionRecord {
         this.storeId = storeId;
     }
 
-    public Double getCouponMatchDiscount() {
-        return couponMatchDiscount;
+    public Double getCouponMatchDisc() {
+        return couponMatchDisc;
     }
 
-    public void setCouponMatchDiscount(Double couponMatchDiscount) {
-        this.couponMatchDiscount = couponMatchDiscount;
+    public void setCouponMatchDisc(Double couponMatchDisc) {
+        this.couponMatchDisc = couponMatchDisc;
     }
 
     public Double getCouponDisc() {

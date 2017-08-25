@@ -29,7 +29,7 @@ public class TransactionServiceImpl implements TransactionService {
                     transactionRecord.getQuantity(),
                     transactionRecord.getSalesValue(),
                     transactionRecord.getStoreId(),
-                    transactionRecord.getCouponMatchDiscount(),
+                    transactionRecord.getCouponMatchDisc(),
                     transactionRecord.getCouponDisc(),
                     transactionRecord.getRetailDisc(),
                     transactionRecord.getTransTime(),

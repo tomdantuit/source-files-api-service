@@ -5,12 +5,12 @@ public class Coupon {
 
     private long campaign;
     private long couponUpc;
-    private long prodId;
+    private long productId;
 
-    public Coupon(long campaign, long couponUpc, long prodId) {
+    public Coupon(long campaign, long couponUpc, long productId) {
         this.campaign = campaign;
         this.couponUpc = couponUpc;
-        this.prodId = prodId;
+        this.productId = productId;
     }
 
     public long getCampaign() {
@@ -29,12 +29,12 @@ public class Coupon {
         this.couponUpc = couponUpc;
     }
 
-    public long getProdId() {
-        return prodId;
+    public long getProductId() {
+        return productId;
     }
 
-    public void setProdId(long prodId) {
-        this.prodId = prodId;
+    public void setProductId(long productId) {
+        this.productId = productId;
     }
 
 }

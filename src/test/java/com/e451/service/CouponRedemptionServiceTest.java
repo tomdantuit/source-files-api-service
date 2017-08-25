@@ -23,13 +23,13 @@ public class CouponRedemptionServiceTest {
 
     // Constants for testing
     private final Long COUPON_REDEMPTION_KEY_1 = new Long(1);
-    private final String COUPON_REDEMPTION_DAY_1 = "12/1/2016";
+    private final Long COUPON_REDEMPTION_DAY_1 = new Long(1);
     private final Long COUPON_REDEMPTION_UPC_1 = new Long(1);
     private final Long COUPON_REDEMPTION_CAMPAIGN_1 = new Long(1);
     private final Long COUPON_REDEMPTION_HSHD_KEY_1 = new Long(1);
 
     private final Long COUPON_REDEMPTION_KEY_2 = new Long(2);
-    private final String COUPON_REDEMPTION_DAY_2 = "10/1/2016";
+    private final Long COUPON_REDEMPTION_DAY_2 = new Long(2);
     private final Long COUPON_REDEMPTION_UPC_2 = new Long(1);
     private final Long COUPON_REDEMPTION_CAMPAIGN_2 = new Long(2);
     private final Long COUPON_REDEMPTION_HSHD_KEY_2 = new Long(2);

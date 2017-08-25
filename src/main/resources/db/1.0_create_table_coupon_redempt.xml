@@ -16,7 +16,7 @@
                     type="BIGINT"
                     remarks="Number uniquely identifies each household"/>
             <column name="DAY"
-                    type="java.sql.Types.VARCHAR(200)"
+                    type="BIGINT"
                     remarks="Day when transaction occurred"/>
             <column name="COUPON_UPC"
                     type="BIGINT"

@@ -10,14 +10,14 @@ public class CouponRedemptionRecord {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private Long householdKey;
-    private String day;
+    private Long day;
     private Long couponUpc;
     private Long campaign;
 
     public CouponRedemptionRecord() {
     }
 
-    public CouponRedemptionRecord(Long householdKey, Long campaign, Long couponUpc, String day, Long id) {
+    public CouponRedemptionRecord(Long householdKey, Long campaign, Long couponUpc, Long day, Long id) {
         this.householdKey = householdKey;
         this.day = day;
         this.couponUpc = couponUpc;
@@ -41,11 +41,11 @@ public class CouponRedemptionRecord {
         this.householdKey = householdKey;
     }
 
-    public String getDay() {
+    public Long getDay() {
         return day;
     }
 
-    public void setDay(String day) {
+    public void setDay(Long day) {
         this.day = day;
     }
 

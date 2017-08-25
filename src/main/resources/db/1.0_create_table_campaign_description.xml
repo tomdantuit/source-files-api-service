@@ -16,10 +16,10 @@
                     type="java.sql.Types.VARCHAR(200)"
                     remarks="Type of campaign (TypeA, TypeB or TypeC)"/>
             <column name="START_DAY"
-                    type="java.sql.Types.Date"
+                    type="BIGINT"
                     remarks="Start date of campaign"/>
             <column name="END_DAY"
-                    type="java.sql.Types.Date"
+                    type="BIGINT"
                     remarks="End date of campaign"/>
         </createTable>
     </changeSet>

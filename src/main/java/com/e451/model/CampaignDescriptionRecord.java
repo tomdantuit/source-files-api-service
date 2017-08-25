@@ -1,7 +1,6 @@
 package com.e451.model;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity()
 @Table(name = "campaign_desc")
@@ -11,12 +10,12 @@ public class CampaignDescriptionRecord {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Long campaign;
     private String description;
-    private Date startDay;
-    private Date endDay;
+    private Long startDay;
+    private Long endDay;
 
     public CampaignDescriptionRecord() {}
 
-    public CampaignDescriptionRecord(Long campaign, String description, Date startDay, Date endDay) {
+    public CampaignDescriptionRecord(Long campaign, String description, Long startDay, Long endDay) {
         this.campaign = campaign;
         this.description = description;
         this.startDay = startDay;
@@ -37,15 +36,15 @@ public class CampaignDescriptionRecord {
         this.description = description;
     }
 
-    public Date getStartDay() { return startDay; }
+    public Long getStartDay() { return startDay; }
 
-    public void setStartDay(Date startDay) {
+    public void setStartDay(Long startDay) {
         this.startDay = startDay;
     }
 
-    public Date getEndDay() { return endDay; }
+    public Long getEndDay() { return endDay; }
 
-    public void setEndDay(Date endDay) {
+    public void setEndDay(Long endDay) {
         this.endDay = endDay;
     }
 

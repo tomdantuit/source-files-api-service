@@ -1,15 +1,13 @@
 package com.e451.domain;
 
-import java.util.Date;
-
 public class CampaignDescription {
 
     private Long campaign;
     private String description;
-    private Date startDay;
-    private Date endDay;
+    private Long startDay;
+    private Long endDay;
 
-    public CampaignDescription(Long campaign, String description, Date startDay, Date endDay) {
+    public CampaignDescription(Long campaign, String description, Long startDay, Long endDay) {
         this.campaign = campaign;
         this.description = description;
         this.startDay = startDay;
@@ -32,19 +30,19 @@ public class CampaignDescription {
         this.description = description;
     }
 
-    public Date getStartDay() {
+    public Long getStartDay() {
         return startDay;
     }
 
-    public void setStartDay(Date startDay) {
+    public void setStartDay(Long startDay) {
         this.startDay = startDay;
     }
 
-    public Date getEndDay() {
+    public Long getEndDay() {
         return endDay;
     }
 
-    public void setEndDay(Date endDay) {
+    public void setEndDay(Long endDay) {
         this.endDay = endDay;
     }
 }

@@ -24,13 +24,13 @@ public class CampaignDescriptionServiceTest {
     // Constants for testing
     private final Long CAMPAIGN_DESCRIPTION_CAMPAIGN1 = new Long(1);
     private final String CAMPAIGN_DESCRIPTION_DESCRIPTION1 = "CampaignDescription1";
-    private final Date CAMPAIGN_DESCRIPTION_START_DAY1 = new Date();
-    private final Date CAMPAIGN_DESCRIPTION_END_DAY1 = new Date();
+    private final Long CAMPAIGN_DESCRIPTION_START_DAY1 = new Long(1);
+    private final Long CAMPAIGN_DESCRIPTION_END_DAY1 = new Long(10);
 
     private final Long CAMPAIGN_DESCRIPTION_CAMPAIGN2 = new Long(2);
     private final String CAMPAIGN_DESCRIPTION_DESCRIPTION2 = "CampaignDescription2";
-    private final Date CAMPAIGN_DESCRIPTION_START_DAY2 = new Date();
-    private final Date CAMPAIGN_DESCRIPTION_END_DAY2 = new Date();
+    private final Long CAMPAIGN_DESCRIPTION_START_DAY2 = new Long(2);
+    private final Long CAMPAIGN_DESCRIPTION_END_DAY2 = new Long(20);
 
 
     private CampaignDescriptionServiceImpl testCampaignDescriptionService;
